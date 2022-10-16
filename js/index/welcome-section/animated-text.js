@@ -5,8 +5,6 @@ const text = [
   "In no time!",
 ];
 
-const info = document.querySelector("#welcome-info-h3");
-
 // Variables for the text animation
 let index = 0;
 let count = 0;
@@ -22,7 +20,7 @@ let letter = "";
   currentText = text[count];
   letter = currentText.slice(0, ++index);
 
-  info.textContent = letter;
+  document.querySelector("#welcome-info-h3").textContent = letter;
   if (letter.length === currentText.length) {
     count++;
     index = 0;
