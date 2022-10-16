@@ -1,0 +1,53 @@
+nav {
+  background-color: #333;
+  box-shadow: 0 0 5px yellow;
+  height: 50px;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.nav-link {
+  float: left;
+  width: 25%;
+}
+
+.nav-link > a {
+  display: block;
+  color: yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link > a:hover {
+  color: white;
+  text-decoration: underline;
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1100px) {
+  nav {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    width: 95%;
+  }
+}

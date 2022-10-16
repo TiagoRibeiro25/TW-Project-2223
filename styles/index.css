@@ -1,0 +1,77 @@
+body {
+  background-color: #191919;
+  font-family: "Press Start 2P", cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-section {
+  background-color: #191919;
+  color: yellow;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-info {
+  text-align: center;
+  cursor: default;
+  margin-top: -30px;
+}
+
+.welcome-info > h1 {
+  font-size: 4rem;
+  margin: 0;
+  animation: wave 5s infinite;
+  padding: 50px;
+}
+
+.welcome-info > h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 50px;
+  cursor: default;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-icon {
+  color: yellow;
+}
+
+/* Animations */
+@keyframes wave {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

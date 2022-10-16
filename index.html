@@ -8,6 +8,41 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Main</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+
+    <!-- JS -->
+    <script src="./js/index/welcome.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <ul class="nav-links">
+        <li class="nav-link"><a href="#">HOME</a></li>
+        <li class="nav-link"><a href="#">CATALOG</a></li>
+        <li class="nav-link"><a href="#">CART</a></li>
+        <li class="nav-link"><a href="#">PROFILE</a></li>
+      </ul>
+    </nav>
+    <section class="welcome-section" id="welcome-section">
+      <!-- Middle Information -->
+      <div class="welcome-info">
+        <h1>Online Game Shop</h1>
+        <h3 id="welcome-info-h3">Buy your favourite games!</h3>
+        <h5>TSIW TW-PROJECT 22/23</h5>
+      </div>
+
+      <!-- scroll down animated icon -->
+      <div class="scroll-down">
+        <a href="#welcome-section">
+          <i class="fas fa-chevron-down fa-3x scroll-icon"></i>
+        </a>
+      </div>
+    </section>
+  </body>
 </html>
