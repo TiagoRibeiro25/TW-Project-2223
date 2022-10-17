@@ -1,5 +1,7 @@
-/* import font */
-@import url("../assets/comic-sans-ms/COMIC.TTF");
+@font-face {
+  font-family: "Comic Sans MS";
+  src: url("../assets/comic-sans-ms/COMIC.TTF");
+}
 
 body {
   background-color: #191919;
