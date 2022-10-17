@@ -94,3 +94,14 @@
     transform: translateY(0);
   }
 }
+
+@media (max-height: 720px) {
+  .welcome-info > h1 {
+    font-size: 3rem;
+  }
+
+  .welcome-info > h3 {
+    margin-top: -20px;
+    font-size: 1.5rem;
+  }
+}
