@@ -1,0 +1,174 @@
+[
+  {
+    "title": "The Witcher 3",
+    "description": "The Witcher 3: Wild Hunt is a 2015 action role-playing video game developed and published by CD Projekt. Based on The Witcher series of fantasy novels by Polish author Andrzej Sapkowski, it is the sequel to the 2011 game The Witcher 2: Assassins of Kings and the third main installment in The Witcher video game series, played in an open world with a third-person perspective.",
+    "image": "../assets/the-witcher.png",
+    "price": 60,
+    "onSale": true,
+    "discount": 0.75,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "May 19, 2015"
+  },
+  {
+    "title": "Dying Light 2",
+    "description": "Dying Light 2 is an upcoming action role-playing video game developed by Techland and published by Warner Bros. Interactive Entertainment. It is the sequel to the 2015 game Dying Light and is scheduled to be released for Microsoft Windows, PlayStation 4, and Xbox One in 2021.",
+    "image": "../assets/dl2.png",
+    "price": 60,
+    "onSale": true,
+    "discount": 0.66,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "2021"
+  },
+  {
+    "title": "Cyberpunk 2077",
+    "description": "Cyberpunk 2077 is an upcoming action role-playing video game developed and published by CD Projekt. Based on the Cyberpunk tabletop role-playing game, it is scheduled to be released for Microsoft Windows, PlayStation 4, and Xbox One on 16 April 2020.",
+    "image": "../assets/cyberpunk.jpg",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "April 16, 2020"
+  },
+  {
+    "title": "The Last of Us Part II",
+    "description": "The Last of Us Part II is an upcoming action-adventure game developed by Naughty Dog and published by Sony Interactive Entertainment. It is scheduled to be released for the PlayStation 4 on May 29, 2020.",
+    "image": "../assets/last_of_us_II.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "Playstation 4"
+    ],
+    "releaseDate": "May 29, 2020"
+  },
+  {
+    "title": "Ghost of Tsushima",
+    "description": "Ghost of Tsushima is an upcoming action-adventure game developed by Sucker Punch Productions and published by Sony Interactive Entertainment for the PlayStation 4. It is scheduled to be released on July 17, 2020.",
+    "image": "../assets/ghost_of_tsushima.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "Playstation 4"
+    ],
+    "releaseDate": "July 17, 2020"
+  },
+  {
+    "title": "Death Stranding",
+    "description": "Death Stranding is an upcoming action game developed by Kojima Productions and published by Sony Interactive Entertainment for the PlayStation 4. It is scheduled to be released on November 8, 2019.",
+    "image": "../assets/deathStrading.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "Playstation 4"
+    ],
+    "releaseDate": "November 8, 2019"
+  },
+  {
+    "title": "Final Fantasy VII Remake",
+    "description": "Final Fantasy VII Remake is an upcoming action role-playing game developed and published by Square Enix. It is a remake of the 1997 PlayStation game Final Fantasy VII, and the first in a planned series of games remaking the original Final Fantasy VII. It is scheduled to be released for the PlayStation 4 on April 10, 2020.",
+    "image": "../assets/ff.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "Playstation 4"
+    ],
+    "releaseDate": "April 10, 2020"
+  },
+  {
+    "title": "Marvel's Avengers",
+    "description": "Marvel's Avengers is an upcoming action-adventure game developed by Crystal Dynamics and published by Square Enix. It is scheduled to be released for Microsoft Windows, PlayStation 4, and Xbox One on May 15, 2020.",
+    "image": "../assets/marvel.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "May 15, 2020"
+  },
+  {
+    "title": "Watch Dogs Legion",
+    "description": "Watch Dogs Legion is an upcoming action-adventure game developed by Ubisoft Toronto and published by Ubisoft. It is scheduled to be released for Microsoft Windows, PlayStation 4, Stadia, and Xbox One on March 6, 2020.",
+    "image": "../assets/watchdogs.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "March 6, 2020"
+  },
+  {
+    "title": "Grand Theft Auto V",
+    "description": "Grand Theft Auto V is an action-adventure game developed by Rockstar North and published by Rockstar Games. It was released on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows. It is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency. The open world design lets players freely roam San Andreas' open countryside and the fictional city of Los Santos, based on Los Angeles. The game is played from either a third-person or first-person perspective and its world is navigated on foot or by vehicle.",
+    "image": "../assets/gtaV.jpg",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "September 17, 2013"
+  },
+  {
+    "title": "Elden Ring",
+    "description": "Elden Ring is an upcoming action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. It is scheduled to be released for Microsoft Windows, PlayStation 4, and Xbox One in 2020.",
+    "image": "../assets/elden-ring.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "2020"
+  },
+  {
+    "title": "Call of Duty: MW 2",
+    "description": "Call of Duty: Modern Warfare 2 is a first-person shooter video game developed by Infinity Ward and published by Activision. It is the sixth installment in the Call of Duty series and the direct sequel to 2009's Call of Duty: Modern Warfare, continuing the same storyline. The game was released worldwide on November 10, 2009 for Microsoft Windows, the PlayStation 3, and Xbox 360. A separate version for the Wii was developed by Treyarch and released on November 11, 2009. The game's campaign follows a task force of U.S. and British special forces as they hunt Vladimir Makarov, a renegade Russian general who plans to use nuclear weapons to upset the balance of global power. The game's multiplayer mode features new additions to the series, including killstreaks, a new pointstreak system, and a new create-a-class system. The game's cooperative mode, Special Ops, features four new missions, including two that are playable with up to three other players. The game received critical acclaim, with praise directed towards its campaign, multiplayer, and graphics. It is considered by many to be one of the greatest video games of all time, and is the best-selling first-person shooter of all time, selling over 25 million copies worldwide by 2015.",
+    "image": "../assets/cod.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "November 10, 2009"
+  }
+]
