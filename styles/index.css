@@ -1,6 +1,9 @@
+/* import font */
+@import url("../assets/comic-sans-ms/COMIC.TTF");
+
 body {
   background-color: #191919;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   margin: 0;
   padding: 0;
 }
