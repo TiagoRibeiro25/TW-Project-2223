@@ -96,3 +96,12 @@ form > button:hover {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
+form > span {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+  color: greenyellow;
+}
