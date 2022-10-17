@@ -48,11 +48,19 @@
 .filter-card > h2 {
   font-size: 1.5rem;
   margin-top: 10px;
+  transition: 0.5s;
 }
 
 .filter-card:hover {
   scale: 1.1;
   cursor: pointer;
   text-decoration: underline;
+  transition: 0.5s;
+}
+
+.filter-card > h2:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
   transition: 0.5s;
 }

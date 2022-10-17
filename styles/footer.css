@@ -1,0 +1,76 @@
+footer {
+  background-color: #191919;
+  color: yellow;
+  padding: 20px;
+  text-align: center;
+}
+
+.where-to-find-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.where-to-find-us > h1 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  margin-left: 10%;
+}
+
+.where-to-find-us-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.where-to-find-us-card {
+  width: 300px;
+  height: 150px;
+  margin: 5px 10px 5px 10px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #191919;
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.where-to-find-us-card:hover {
+  scale: 1.03;
+  transition: 0.5s;
+}
+
+.footer-bottom {
+  background-color: #191919;
+  color: yellow;
+  padding: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.where-to-find-us-card > p:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1370px) {
+  .where-to-find-us-card {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1032px) {
+  .where-to-find-us-card {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .where-to-find-us-card {
+    width: 100%;
+  }
+}

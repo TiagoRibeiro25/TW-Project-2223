@@ -1,0 +1,98 @@
+.about-section {
+  background-color: #191919;
+  color: yellow;
+  padding: 20px 0;
+  padding-bottom: 80px;
+}
+
+.about-section > h1 {
+  font-size: 2rem;
+  margin-left: 10%;
+  text-decoration: underline;
+}
+
+.about-section > p {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.about-section > p > span {
+  display: block;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+form {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+  max-width: 800px;
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+.form-group > label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form-group > input {
+  height: 30px;
+}
+
+.form-group > textarea {
+  height: 100px;
+}
+
+.form-group > input,
+.form-group > textarea {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.form-group > input:hover,
+.form-group > textarea:hover {
+  box-shadow: 0 0 10px yellow;
+  transition: 0.3s;
+}
+
+.form-group > input:focus,
+.form-group > textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px yellow;
+  transition: 0.2s;
+}
+
+form > button {
+  margin: 0 auto;
+  display: block;
+  width: 101.8%;
+  height: 40px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  background-color: #191919;
+  border-radius: 5px;
+  color: yellow;
+  border: 1px solid yellow;
+  transition: all 0.3s ease;
+}
+
+form > button:hover {
+  background-color: yellow;
+  color: #191919;
+  scale: 1.01;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
