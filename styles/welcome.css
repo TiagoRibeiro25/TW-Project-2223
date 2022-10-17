@@ -62,6 +62,10 @@
   color: yellow;
 }
 
+.scroll-icon:hover {
+  color: white;
+}
+
 /* Animations */
 @keyframes wave {
   0% {
