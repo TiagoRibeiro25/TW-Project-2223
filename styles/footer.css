@@ -57,6 +57,26 @@ footer {
   text-decoration: underline;
 }
 
+.page-sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.page-sections > a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  margin-left: 10px;
+}
+
+.page-sections > a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1370px) {
   .where-to-find-us-card {
     width: 200px;
