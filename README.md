@@ -13,7 +13,7 @@ JavaScript and GIT.
 ## Authors
 
 - [Tiago Ribeiro](https://github.com/TiagoRibeiro25)
-- [José Nogueira](https://github.com/TiagoRibeiro25)
+- [José Nogueira](https://github.com/JoseNogueira13)
 
 ## Live Demo
 
