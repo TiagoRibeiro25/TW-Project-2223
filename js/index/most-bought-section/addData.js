@@ -16,7 +16,7 @@ for (let i = 1; i < 5; i++) {
 }
 
 // Add "On Sale" games to the DOM
-const onSale = catalogData.filter((item) => item.onSale === true);
+const onSale = catalogData.filter((item) => item.onSale);
 onSale.forEach((item) => {
   document.querySelector("#on-sale-catalog").innerHTML += `
     <div class="on-sale-card">
