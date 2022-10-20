@@ -4,5 +4,4 @@ async function getData() {
   return data;
 }
 
-const catalogData = await getData();
-console.log(catalogData);
+export const catalogData = await getData();

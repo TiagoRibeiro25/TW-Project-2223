@@ -29,6 +29,10 @@
       src="./js/index/welcome-section/animated-text.js"
       defer
     ></script>
+    <script
+      type="module"
+      src="./js/index/most-bought-section/addData.js"
+    ></script>
     <script src="./js/index/welcome-section/source-code.js" defer></script>
     <script src="./js/index/about-section/form.js" defer></script>
   </head>
@@ -71,72 +75,34 @@
     <!-- Most Bought -->
     <section class="most-bought-section" id="most-bought-section">
       <h1>Most Bought</h1>
-      <div class="most-bought-catalog">
-        <div class="most-bought-card">
-          <img src="./assets/cyberpunk.jpg" alt="Cyberpunk 2077" />
-          <h2>Cyberpunk 2077</h2>
-          <h4>Platform: PC</h4>
-          <p>Price: 60€</p>
+      <div class="most-bought-catalog" id="most-bought-catalog">
+        <!-- <div class="most-bought-card">
+          <img src="{image}" alt="{title}" />
+          <h2>{title}</h2>
+          <h4>Platform: {platforms}</h4>
+          <p>Price: {price}€</p>
           <button>Buy</button>
-        </div>
-        <div class="most-bought-card">
-          <img src="./assets/gtaV.jpg" alt="Cyberpunk 2077" />
-          <h2>Grand Theft Auto 5</h2>
-          <h4>Platform: PS4</h4>
-          <p>Price: 40€</p>
-          <button>Buy</button>
-        </div>
-        <div class="most-bought-card">
-          <img src="./assets/elden-ring.png" alt="Elden Ring" />
-          <h2>Elden Ring</h2>
-          <h4>Platform: PS5</h4>
-          <p>Price: 60€</p>
-          <button>Buy</button>
-        </div>
-        <div class="most-bought-card">
-          <img
-            src="./assets/cod.png"
-            alt="Call of Duty: Modern Warfare 2"
-          />
-          <h2>Call of Duty: MW 2</h2>
-          <h4>Platform: XBOX</h4>
-          <p>Price: 70€</p>
-          <button>Buy</button>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- On Sale -->
     <section class="on-sale-section" id="on-sale-section">
       <h1>On Sale</h1>
-      <div class="on-sale-catalog">
-        <div class="on-sale-card">
-          <img src="./assets/the-witcher.png" alt="Cyberpunk 2077" />
-          <h2>The Witcher 3</h2>
-          <h4>Platform: PS4</h4>
+      <div class="on-sale-catalog" id="on-sale-catalog">
+        <!-- <div class="on-sale-card">
+          <img src="{image}" alt="{title}" />
+          <h2>{title}</h2>
+          <h4>Platform: {platform/s}</h4>
           <p>
-            <span class="old-price">60€</span>
+            <span class="old-price">{price}€</span>
             <span class="discount">
-              <i class="fas fa-arrow-down"></i> 75%
+              <i class="fas fa-arrow-down"></i> {discount}%
             </span>
             <br />
-            Price: 15€
+            Price: {price with discount}€
           </p>
           <button>Buy</button>
-        </div>
-        <div class="on-sale-card">
-          <img src="./assets/dl2.png" alt="Cyberpunk 2077" />
-          <h2>Dying Light 2</h2>
-          <h4>Platform: PC</h4>
-          <p>
-            <span class="old-price">60€</span>
-            <span class="discount">
-              <i class="fas fa-arrow-down"></i> 66%
-            </span>
-            <br />
-            Price: 20€
-          </p>
-          <button>Buy</button>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- Filter -->
@@ -150,7 +116,7 @@
         </div>
         <div class="filter-card">
           <img src="./assets/playstation.png" alt="PS4" />
-          <h2>PS4</h2>
+          <h2>PlayStation</h2>
         </div>
         <div class="filter-card">
           <img src="./assets/xbox.png" alt="XBOX" />
