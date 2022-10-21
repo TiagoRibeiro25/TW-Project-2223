@@ -95,7 +95,7 @@
   }
 }
 
-@media (max-height: 730px) {
+@media (max-height: 850px) and (max-width: 770px) {
   .welcome-info > h1 {
     font-size: 3rem;
   }
