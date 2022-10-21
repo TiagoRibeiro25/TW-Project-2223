@@ -1,3 +1,7 @@
+/**
+ * It returns the users from localStorage if it exists, otherwise it returns an array with one user.
+ * @returns An array of objects.
+ */
 export function getUsers() {
   return (
     JSON.parse(localStorage.users) || [
