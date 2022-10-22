@@ -55,3 +55,39 @@ export function createUser(newUser) {
     message: "There's already an account with that same email.",
   };
 }
+
+/**
+ * It takes an email and password, checks if they match a user in the users array, and if they do, it
+ * stores the user in sessionStorage and returns a success message. If they don't match a user, it
+ * returns a failure message
+ * @param email - The email address of the user.
+ * @param password - "12345"
+ * @returns An object with two properties: success and message.
+ */
+export function logIn(email, password) {
+  const user = users.find(
+    (user) => user.email === email && user.password === password
+  );
+  if (user) {
+    sessionStorage.user = JSON.stringify(user);
+    return {
+      success: true,
+      message: `Welcome back, ${user.name}!`,
+    };
+  }
+  return {
+    success: false,
+    message: "Wrong email or password.",
+  };
+}
+
+/**
+ * It removes the user from the session storage.
+ */
+export function logOut() {
+  sessionStorage.removeItem("user");
+}
+
+export function isUserLogged() {
+  return sessionStorage.user ? true : false;
+}
