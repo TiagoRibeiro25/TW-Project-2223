@@ -88,6 +88,10 @@ export function logOut() {
   sessionStorage.removeItem("user");
 }
 
+/**
+ * If the user is logged in, return true, otherwise return false.
+ * @returns A function that returns a boolean value.
+ */
 export function isUserLogged() {
   return sessionStorage.user ? true : false;
 }
