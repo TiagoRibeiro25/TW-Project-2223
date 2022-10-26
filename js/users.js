@@ -32,7 +32,7 @@ function getNextId() {
  * @returns The function isUserValid is returning a boolean value.
  */
 function isUserValid(newUser) {
-  if (users.some((user) => user.email === newUser.email)) return false;
+  return !users.some((user) => user.email === newUser.email);
 }
 
 /**
