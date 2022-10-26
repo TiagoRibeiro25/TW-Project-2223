@@ -13,7 +13,7 @@
 
 .log-in-section > h1 {
   font-size: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 0;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .form-input {
-  /* display: block; */
+  display: block;
   width: 50%;
   padding: 10px;
   border-radius: 5px;
@@ -30,25 +30,15 @@
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
-  transition: 0.5s;
-}
-
-.form-input:focus {
-  animation: input-focus 0.5s ease-in-out;
-  display: block;
-  width: 70%;
   text-align: center;
   transition: 0.5s;
 }
 
-@keyframes input-focus {
-  0% {
-    width: 50%;
-  }
-  100% {
-    width: 70%;
-  }
+.form-input:focus {
+  display: block;
+  width: 60%;
+  text-align: center;
+  transition: 0.5s;
 }
 
 .form-msg {
@@ -90,17 +80,17 @@
   transition: 0.5s;
 }
 
-.sign-up {
+.sign {
   font-size: 18px;
   margin-bottom: -20px;
 }
 
-.sign-up > a {
+.sign > a {
   color: white;
   text-decoration: none;
 }
 
-.sign-up > a:hover {
+.sign > a:hover {
   text-decoration: underline;
 }
 

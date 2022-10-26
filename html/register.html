@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Online Game Shop - Log In</title>
+    <title>Online Game Shop - Register</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/index.css" />
@@ -37,10 +37,18 @@
       </ul>
     </nav>
 
-    <!-- Log In -->
+    <!-- Register -->
     <section class="log-in-section" id="log-in-section">
-      <h1>Log In</h1>
+      <h1>Register</h1>
       <form id="log-in-form" class="log-in-form">
+        <label for="username">Name</label>
+        <input
+          class="form-input"
+          type="username"
+          id="username"
+          name="username"
+          required
+        />
         <label for="email">Email</label>
         <input
           class="form-input"
@@ -60,11 +68,11 @@
 
         <p class="form-msg" id="form-msg">Message</p>
 
-        <input type="submit" value="Sign In" />
+        <input type="submit" value="Sign Up" />
 
-        <!-- Don't have an account? Sign Up -->
+        <!-- Already have an account? Sign In -->
         <p class="sign">
-          Don't have an account? <a href="./register.html">Sign Up</a>
+          Already have an account? <a href="./login.html">Sign In</a>
         </p>
       </form>
     </section>
