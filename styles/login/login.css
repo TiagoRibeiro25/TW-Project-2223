@@ -1,0 +1,89 @@
+.log-in-section {
+  background-color: #333;
+  color: yellow;
+  border-radius: 5px;
+  box-shadow: 0 0 10px yellow;
+  padding: 50px 120px;
+  text-align: center;
+  width: 450px;
+
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.log-in-section > h1 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.log-in-form > label {
+  margin-bottom: 10px;
+}
+
+.form-input {
+  /* display: block; */
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  transition: 0.5s;
+}
+
+.form-input:focus {
+  animation: input-focus 0.5s ease-in-out;
+  display: block;
+  width: 70%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+@keyframes input-focus {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.log-in-form > input[type="submit"] {
+  background-color: #333;
+  color: yellow;
+  font-size: 20px;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.log-in-form > input[type="submit"]:hover {
+  background-color: yellow;
+  color: #333;
+  border: 1px solid #333;
+  scale: 1.03;
+  box-shadow: 0 0 10px yellow;
+  border: 1px solid yellow;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 750px) {
+  .log-in-section {
+    width: 70%;
+    padding: 50px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .log-in-form > input[type="submit"] {
+    width: 70%;
+  }
+}

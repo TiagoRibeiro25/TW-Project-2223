@@ -12,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/login/login.css" />
 
     <!-- JS -->
     <script
@@ -29,5 +30,30 @@
         <li class="nav-link"><a href="./html/profile.html">PROFILE</a></li>
       </ul>
     </nav>
+
+    <!-- Log In -->
+    <section class="log-in-section" id="log-in-section">
+      <h1>Log In</h1>
+      <form id="log-in-form" class="log-in-form">
+        <label for="email">Email</label>
+        <input
+          class="form-input"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+        <br />
+        <label for="password">Password</label>
+        <input
+          class="form-input"
+          type="password"
+          id="password"
+          name="password"
+          required
+        />
+        <input type="submit" value="Sign In" />
+      </form>
+    </section>
   </body>
 </html>
