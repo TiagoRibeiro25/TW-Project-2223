@@ -51,6 +51,21 @@
   }
 }
 
+.form-msg {
+  display: none;
+  font-size: 18px;
+}
+
+.success {
+  color: lime;
+  display: block;
+}
+
+.error {
+  color: red;
+  display: block;
+}
+
 .log-in-form > input[type="submit"] {
   background-color: #333;
   color: yellow;
@@ -73,6 +88,20 @@
   box-shadow: 0 0 10px yellow;
   border: 1px solid yellow;
   transition: 0.5s;
+}
+
+.sign-up {
+  font-size: 18px;
+  margin-bottom: -20px;
+}
+
+.sign-up > a {
+  color: white;
+  text-decoration: none;
+}
+
+.sign-up > a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 750px) {

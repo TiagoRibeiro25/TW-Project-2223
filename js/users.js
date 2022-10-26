@@ -72,7 +72,7 @@ export function logIn(email, password) {
     sessionStorage.user = JSON.stringify(user);
     return {
       success: true,
-      message: `Welcome back, ${user.name}!`,
+      message: `Welcome back, ${user.name}`,
     };
   }
   return {
