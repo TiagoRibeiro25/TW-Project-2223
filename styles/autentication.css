@@ -1,4 +1,4 @@
-.log-in-section {
+section {
   background-color: #333;
   color: yellow;
   border-radius: 5px;
@@ -6,18 +6,17 @@
   padding: 50px 120px;
   text-align: center;
   width: 450px;
-
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 120px;
 }
 
-.log-in-section > h1 {
+section > h1 {
   font-size: 30px;
   margin-bottom: 30px;
   margin-top: 0;
 }
 
-.log-in-form > label {
+form > label {
   margin-bottom: 10px;
 }
 
@@ -39,6 +38,13 @@
   width: 60%;
   text-align: center;
   transition: 0.5s;
+  outline: none;
+  box-shadow: 0 0 10px yellow;
+}
+
+.form-input:hover {
+  box-shadow: 0 0 10px yellow;
+  transition: 0.3s;
 }
 
 .form-msg {
@@ -56,7 +62,7 @@
   display: block;
 }
 
-.log-in-form > input[type="submit"] {
+form > input[type="submit"] {
   background-color: #333;
   color: yellow;
   font-size: 20px;
@@ -70,7 +76,7 @@
   transition: 0.5s;
 }
 
-.log-in-form > input[type="submit"]:hover {
+form > input[type="submit"]:hover {
   background-color: yellow;
   color: #333;
   border: 1px solid #333;
@@ -95,14 +101,14 @@
 }
 
 @media screen and (max-width: 750px) {
-  .log-in-section {
+  section {
     width: 70%;
     padding: 50px 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .log-in-form > input[type="submit"] {
+  form > input[type="submit"] {
     width: 70%;
   }
 }
