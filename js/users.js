@@ -3,17 +3,17 @@
  * @returns An array of objects.
  */
 export function getUsers() {
-  return (
-    JSON.parse(localStorage.users) || [
-      {
-        id: 1,
-        name: "John",
-        email: "john@email.com",
-        password: "123",
-        cart: ["Ghost of Tsushima", "Cyberpunk 2077"],
-      },
-    ]
-  );
+  return localStorage.users
+    ? JSON.parse(localStorage.users)
+    : [
+        {
+          id: 1,
+          name: "John",
+          email: "john@email.com",
+          password: "123",
+          cart: ["Ghost of Tsushima", "Cyberpunk 2077"],
+        },
+      ];
 }
 
 const users = getUsers();
@@ -93,5 +93,5 @@ export function logOut() {
  * @returns A function that returns a boolean value.
  */
 export function isUserLogged() {
-  return sessionStorage.user ? true : false;
+  return sessionStorage.user;
 }
