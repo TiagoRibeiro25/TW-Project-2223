@@ -15,16 +15,14 @@ document
       password,
     });
 
-    if (!result.success) {
-      document.querySelector("#form-msg").classList.add("error");
-      document.querySelector("#form-msg").classList.remove("success");
-      // Update the message text.
-      document.querySelector("#form-msg").innerText = result.message;
-      return;
-    }
-
-    document.querySelector("#form-msg").classList.add("success");
-    document.querySelector("#form-msg").classList.remove("error");
     // Update the message text.
     document.querySelector("#form-msg").innerText = result.message;
+
+    if (result.success) {
+      document.querySelector("#form-msg").classList.add("success");
+      document.querySelector("#form-msg").classList.remove("error");
+    } else {
+      document.querySelector("#form-msg").classList.add("error");
+      document.querySelector("#form-msg").classList.remove("success");
+    }
   });
