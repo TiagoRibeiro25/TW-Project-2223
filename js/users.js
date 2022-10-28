@@ -16,14 +16,12 @@ export function getUsers() {
       ];
 }
 
-const users = getUsers();
-
 /**
  * It returns the id of the last user in the users collection, plus one.
  * @returns The last user's id + 1
  */
 function getNextId() {
-  return users.at(-1).id + 1;
+  return getUsers().at(-1).id + 1;
 }
 
 /**
@@ -32,7 +30,7 @@ function getNextId() {
  * @returns The function isUserValid is returning a boolean value.
  */
 function isUserValid(newUser) {
-  return !users.some((user) => user.email === newUser.email);
+  return !getUsers().some((user) => user.email === newUser.email);
 }
 
 /**
@@ -43,6 +41,7 @@ function isUserValid(newUser) {
 export function createUser(newUser) {
   if (isUserValid(newUser)) {
     newUser.id = getNextId();
+    users = getUsers();
     users.push(newUser);
     localStorage.users = JSON.stringify(users);
     return {
@@ -65,7 +64,7 @@ export function createUser(newUser) {
  * @returns An object with two properties: success and message.
  */
 export function logIn(email, password) {
-  const user = users.find(
+  const user = getUsers().find(
     (user) => user.email === email && user.password === password
   );
   if (user) {
@@ -94,4 +93,52 @@ export function logOut() {
  */
 export function isUserLogged() {
   return sessionStorage.user;
+}
+
+/**
+ * It returns the user object from the sessionStorage.
+ * @returns The user object.
+ */
+export function getUserLogged() {
+  return JSON.parse(sessionStorage.user);
+}
+
+/**
+ * If the new email is the same as the old one, update the data.
+ * If the new email is different from the old one, check if it's already in use.
+ * If it's not, update the data.
+ * @param newUser - {
+ * @returns a boolean value.
+ */
+export function updateUser(newUser) {
+  // If the new email is the same as the old one:
+  if (getUserLogged().email === newUser.email) {
+    updateData(newUser);
+    return true;
+  }
+  // If the new email is different from the old one:
+
+  // If the new email is already in use:
+  if (!isUserValid(newUser)) return false;
+
+  // If the new email is not in use:
+  updateData(newUser);
+  return true;
+}
+
+/**
+ * It updates the current user in session storage and the user in local storage.
+ * @param newUser - The new user object that will be used to update
+ * the session storage and local storage.
+ */
+function updateData(newUser) {
+  // Update Session Storage (current user logged in)
+  sessionStorage.user = JSON.stringify(newUser);
+
+  const users = getUsers();
+
+  // Update Local Storage
+  const userIndex = users.findIndex((user) => user.id === newUser.id);
+  users[userIndex] = newUser;
+  localStorage.users = JSON.stringify(users);
 }
