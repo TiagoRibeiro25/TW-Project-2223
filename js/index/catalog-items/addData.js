@@ -6,7 +6,7 @@ for (let i = 1; i < 5; i++) {
 
   document.querySelector("#most-bought-catalog").innerHTML += `
     <div class="most-bought-card">
-      <img src="${item.image}" alt="${item.title}" />
+      <img src="${item.image}" alt="${item.title}" loading="lazy"/>
       <h2>${item.title}</h2>
       <h4>Platforms: ${item.platforms}</h4>
       <p>Price: ${item.price}€</p>
@@ -20,7 +20,7 @@ const onSale = catalogData.filter((item) => item.onSale);
 onSale.forEach((item) => {
   document.querySelector("#on-sale-catalog").innerHTML += `
     <div class="on-sale-card">
-      <img src="${item.image}" alt="${item.title}" />
+      <img src="${item.image}" alt="${item.title}" loading="lazy"/>
       <h2>${item.title}</h2>
       <h4>Platform: ${item.platforms.at(2)}</h4>
       <p>
