@@ -3,7 +3,6 @@ import { catalogData } from "../../getData.js";
 // Add "Most Bought" games to the DOM
 for (let i = 1; i < 5; i++) {
   const item = catalogData.at(0 - i); // Get the last 4 games from the catalog
-
   document.querySelector("#most-bought-catalog").innerHTML += `
     <div class="most-bought-card">
       <img src="${item.image}" alt="${item.title}" loading="lazy"/>
@@ -35,3 +34,4 @@ onSale.forEach((item) => {
     </div>
   `;
 });
+
