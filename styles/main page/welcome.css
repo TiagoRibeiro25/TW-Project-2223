@@ -95,7 +95,7 @@
   }
 }
 
-@media (max-height: 850px) and (max-width: 770px) {
+@media (max-width: 770px) or (max-height: 600px) {
   .welcome-info > h1 {
     font-size: 3rem;
   }
@@ -103,5 +103,18 @@
   .welcome-info > h3 {
     margin-top: -20px;
     font-size: 1.5rem;
+  }
+}
+
+@media (max-height: 430px) {
+  .welcome-info > h1 {
+    font-size: 2rem;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .welcome-info > h3 {
+    margin-top: -20px;
+    font-size: 1rem;
   }
 }
