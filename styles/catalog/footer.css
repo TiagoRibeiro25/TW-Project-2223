@@ -1,0 +1,13 @@
+footer,
+.where-to-find-us-card,
+.footer-bottom,
+.page-sections > a {
+  background-color: yellow;
+  color: black;
+}
+
+.where-to-find-us-card > p:hover,
+.page-sections > a:hover {
+  color: black;
+  text-decoration: underline;
+}

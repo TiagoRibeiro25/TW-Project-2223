@@ -21,70 +21,72 @@
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/main page/onSale.css" />
     <link rel="stylesheet" href="../styles/catalog/allGames.css" />
-   
+
     <link rel="stylesheet" href="../styles/catalog/catalogFilter.css" />
-    <link rel="stylesheet" href="../styles/main page/about.css" />
-    <link rel="stylesheet" href="../styles/main page/madeBy.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/catalog/footer.css" />
 
     <!-- JS -->
-    <script
-      type="module"
-      src="../js/catalog/addGames.js"
-      defer
-    ></script>
-    <script src="../js/index/about-section/form.js" defer></script>
+    <script type="module" src="../js/catalog/addGames.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
     <nav id="navbar">
       <ul class="nav-links">
         <li class="nav-link selected"><a href="../index.html">HOME</a></li>
-        <li class="nav-link"><a href="../html/catalog.html">CATALOG</a></li>
+        <li class="nav-link">
+          <a href="../html/catalog.html">CATALOG</a>
+        </li>
         <li class="nav-link"><a href="../html/cart.html">CART</a></li>
         <li class="nav-link"><a href="../html/login.html">PROFILE</a></li>
       </ul>
     </nav>
 
-    <!-- Most Bought -->
     <section class="all-games-section" id="all-games-section">
       <h1>All Games</h1>
-         <!-- Filter -->
-    <section class="filter-section" id="filter-section">
-      <div class="filter-catalog">
-        
-        <div id="sales" class="filterBtn">
-          <h2>SALES</h2>
-        </div>
-        <div id="PC" class="filter-card">
-          <img src="../assets/steam.png" alt="PC" loading="lazy" />
-          <h2>PC</h2>
-        </div>
-        <div id="PS" class="filter-card">
-          <img src="../assets/playstation.png" alt="PS4" loading="lazy" />
-          <h2>PS</h2>
-        </div>
-        <div id="XBOX" class="filter-card">
-          <img src="../assets/xbox.png" alt="XBOX" loading="lazy" />
-          <h2>XBOX</h2>
-        </div>
-        <div class="filter-card" id="filter-card">
-          <button class="dropbtn"><p>Filter v</p></button>
-          <div class="dropdown-content">
-            <a id="AZ" href="#">A to Z</a>
-            <a id="ZA" href="#">Z to A</a>
-            <a id="priceUp" href="#">Price Up</a>
-            <a id="priceDown" href="#">Price Down</a> 
+      <!-- Filter -->
+      <section class="filter-section" id="filter-section">
+        <div class="filter-catalog">
+          <div id="sales" class="filterBtn">
+            <h2>SALES</h2>
+          </div>
+          <div id="PC" class="filter-card">
+            <img src="../assets/steam.png" alt="PC" loading="lazy" />
+            <h2>PC</h2>
+          </div>
+          <div id="PS" class="filter-card">
+            <img
+              src="../assets/playstation.png"
+              alt="PS4"
+              loading="lazy"
+            />
+            <h2>PS</h2>
+          </div>
+          <div id="XBOX" class="filter-card">
+            <img src="../assets/xbox.png" alt="XBOX" loading="lazy" />
+            <h2>XBOX</h2>
+          </div>
+          <div class="filter-card" id="filter-card">
+            <button class="dropbtn"><p>Filter v</p></button>
+            <div class="dropdown-content">
+              <a id="AZ" href="#">A to Z</a>
+              <a id="ZA" href="#">Z to A</a>
+              <a id="priceUp" href="#">Price Up</a>
+              <a id="priceDown" href="#">Price Down</a>
+            </div>
+          </div>
+          <div id="search" class="filterBtn">
+            <input
+              type="text"
+              id="myInput"
+              placeholder="Search for names.."
+            />
+          </div>
+          <div id="reset" class="filterBtn">
+            <h2>X</h2>
           </div>
         </div>
-        <div id="search" class="filterBtn">
-          <input type="text" id="myInput" placeholder="Search for names..">
-        </div>
-        <div id="reset" class="filterBtn">
-          <h2>X</h2>
-        </div>
-      </div>
-    </section>
+      </section>
       <div class="all-games-catalog" id="all-games-catalog">
         <!-- <div class="most-bought-card">
           <img src="{image}" alt="{title}" />
@@ -93,102 +95,6 @@
           <p>Price: {price}€</p>
           <button>Buy</button>
         </div> -->
-      </div>
-    </section>
-
-    <!-- About Us -->
-    <section class="about-section" id="about-section">
-      <h1>About Online GameShop</h1>
-      <p>
-        Online GameShop is a school project made by Tiago Ribeiro and José
-        Nogueira. This project was made for the subject Web Technologies of
-        the course of Technologies and Information Systems for the Web at
-        ESMAD - Escola Superior de Media Artes e Design. The theme of this
-        project is a E-Commerce website, more specifically an online game
-        shop. The main goal of this project is to learn how to use the
-        technologies we have learned in the subject, such as HTML, CSS,
-        JavaScript and GIT.
-
-        <span>We hope you enjoy our project!</span>
-      </p>
-
-      <p>
-        If you have time, fill out this survey to help us improve our
-        project!
-      </p>
-
-      <!-- Send Feedback Form -->
-      <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Leave us some feedback to help us improve our project!"
-          ></textarea>
-        </div>
-        <span id="form-message">Message sent with success!</span>
-        <button type="submit"><i class="fas fa-envelope"></i> Send</button>
-      </form>
-    </section>
-
-    <!-- Made by -->
-    <section class="made-by-section" id="made-by-section">
-      <h1>Made by</h1>
-      <div class="made-by-catalog">
-        <div class="made-by-card">
-          <h2>Tiago Ribeiro</h2>
-          <h4>
-            Student Number: <span class="student-number">40210462</span>
-          </h4>
-          <h4>Course: Technologies and Information Systems for the Web</h4>
-          <h4>ESMAD - Escola Superior de Media Artes e Design</h4>
-          <div class="made-by-connections">
-            <a href="https://github.com/TiagoRibeiro25" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a
-              href="https://open.spotify.com/user/rgcb95ufripshahmeobrv4i7c"
-              target="_blank"
-            >
-              <i class="fab fa-spotify"></i>
-            </a>
-            <a
-              href="https://www.freecodecamp.org/25GOLD25"
-              target="_blank"
-            >
-              <i class="fab fa-free-code-camp"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCFNmQr69K_roRLsXl_-2hfg"
-              target="_blank"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-        <div class="made-by-card">
-          <h2>José Nogueira</h2>
-          <h4>
-            Student Number: <span class="student-number">40210472</span>
-          </h4>
-          <h4>Course: Technologies and Information Systems for the Web</h4>
-          <h4>ESMAD - Escola Superior de Media Artes e Design</h4>
-          <div class="made-by-connections">
-            <a href="https://github.com/JoseNogueira13" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
