@@ -40,8 +40,8 @@ function isUserValid(newUser) {
  */
 export function createUser(newUser) {
   if (isUserValid(newUser)) {
+    const users = getUsers();
     newUser.id = getNextId();
-    users = getUsers();
     users.push(newUser);
     localStorage.users = JSON.stringify(users);
     return {
