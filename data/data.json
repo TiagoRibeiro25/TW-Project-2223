@@ -170,5 +170,164 @@
       "Playstation 4"
     ],
     "releaseDate": "November 10, 2009"
+  },
+  {
+    "title": "Half-Life: Alyx",
+    "description": "Half-Life: Alyx is a virtual reality first-person shooter video game developed and published by Valve. It is the first Half-Life game since Half-Life 2: Episode Two in 2007, and the first game in the series to be released for 13 years. The game was released on March 23, 2020, for Microsoft Windows, and on March 3, 2020, for Valve Index, HTC Vive, and Oculus Rift headsets. The game is set between the events of Half-Life and Half-Life 2, and follows Alyx Vance, who is forced to work with the resistance to fight the alien Combine. The game is played from a first-person perspective, and features combat, exploration, and puzzle-solving elements. The game's story is told through non-linear levels, and the player can use a variety of weapons and gadgets. The game was met with critical acclaim, with praise directed towards its story, gameplay, and graphics. It was also a commercial success, selling over 1 million copies in its first week.",
+    "image": "../assets/alyx.png",
+    "price": 40,
+    "onSale": false,
+    "discount": 0,
+    "rating": 3.3,
+    "platforms": [
+      "PC"
+    ],
+    "releaseDate": "March 23, 2020"
+  },
+  {
+    "title": "Halo Infinite",
+    "description": "Halo Infinite is an upcoming first-person shooter video game developed by 343 Industries and published by Xbox Game Studios for Xbox One, Xbox Series X, and Microsoft Windows. It is scheduled to be released in 2020.",
+    "image": "../assets/halo.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.7,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Xbox Series X"
+    ],
+    "releaseDate": "April 8, 2020"
+  },
+  {
+    "title": "Resident Evil 3",
+    "description": "Resident Evil 3 is an upcoming survival horror game developed and published by Capcom. It is scheduled to be released for Microsoft Windows, PlayStation 4, and Xbox One on April 3, 2020. It is a remake of the 1999 game of the same name, and is the third installment in the Resident Evil remake project, following Resident Evil 2. The game follows Jill Valentine and Carlos Oliveira as they attempt to escape from Raccoon City during a zombie apocalypse. The game is played from a third-person perspective, and features exploration, puzzle-solving, and combat elements. The game's story is told through non-linear levels, and the player can use a variety of weapons and items. The game was met with critical acclaim, with praise directed towards its gameplay, graphics, and story. It was also a commercial success, selling over 2 million copies worldwide by 2019.",
+    "image": "../assets/re3.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "April 3, 2020"
+  },
+  {
+    "title": "Red Dead Redemption 2",
+    "description": "Red Dead Redemption 2 is a 2018 action-adventure game developed and published by Rockstar Games. It is the third entry in the Red Dead series and a prequel to 2010's Red Dead Redemption. The game is played from a third-person perspective and its world is navigated on foot or by horseback. The story is set in 1899 in a fictionalized representation of the Western, Midwestern, and Southern United States and follows outlaw Arthur Morgan, a member of the Van der Linde gang. The game's open world design lets players freely roam in an open world environment, which includes cities, prairies, forests, and mountains. The game features elements of a nonlinear narrative, and players control Arthur and his gang during robberies and other criminal activities. The game's story is told through cutscenes and gameplay sequences, and players can interact with non-player characters to influence the game's story. The game's combat system is based on gunplay, melee combat, and stealth mechanics. Players can use weapons such as revolvers, rifles, and shotguns, and can dual-wield weapons. The game's soundtrack features a score composed by Woody Jackson and a soundtrack featuring over 100 songs from the 1890s to 1910s.",
+    "image": "../assets/rdr2.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "October 26, 2018"
+  },
+  {
+    "title": "Borderlands 3",
+    "description": "Borderlands 3 is an upcoming action role-playing first-person shooter video game developed by Gearbox Software and published by 2K Games. It is the sequel to 2012's Borderlands 2, and the fourth main entry in the Borderlands series. The game is scheduled to be released for Microsoft Windows, PlayStation 4, and Xbox One on September 13, 2019. The game is set on the fictional planet of Pandora, where players assume the roles of four new Vault Hunters as they attempt to stop the Calypso Twins from opening the Vault on Promethea. The game is played from a first-person perspective, and features elements of role-playing games such as character customization and loot. The game's story is told through non-linear levels, and the player can use a variety of weapons and items. The game was met with critical acclaim, with praise directed towards its gameplay, graphics, and story. It was also a commercial success, selling over 5 million copies worldwide by 2019.",
+    "image": "../assets/borderlands.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.5,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "September 13, 2019"
+  },
+  {
+    "title": "Harry Potter",
+    "description": "Harry Potter: Wizards Unite is a location-based augmented reality game developed by Niantic and published by Warner Bros. Interactive Entertainment. It is based on the Harry Potter franchise and is the second game in the Wizarding World franchise, following Pokémon Go. The game was released on June 21, 2019, for iOS and Android devices. The game is set in the Harry Potter universe, and players take on the role of a new recruit of the Statute of Secrecy Task Force, a secret organization that protects the wizarding world from Muggle knowledge of magic. The game is played from a first-person perspective, and features elements of role-playing games such as character customization and loot. The game's story is told through non-linear levels, and the player can use a variety of spells and items. The game was met with critical acclaim, with praise directed towards its gameplay, graphics, and story. It was also a commercial success, selling over 5 million copies worldwide by 2019.",
+    "image": "../assets/harryPotter.png",
+    "price": 30,
+    "onSale": false,
+    "discount": 0,
+    "rating": 3,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "June 21, 2019"
+  },
+  {
+    "title": "Demon Souls",
+    "description": "Demon's Souls is an action role-playing game developed by FromSoftware and published by Sony Computer Entertainment for the PlayStation 3. It was released in Japan in October 2009, North America in January 2010, and Europe in March 2010. The game is a spiritual successor to FromSoftware's 1994 PlayStation game King's Field, and is the first installment in the Souls series. The game is set in the fictional kingdom of Boletaria, where players assume the role of a cursed knight who must travel to the Tower of Latria to defeat the Old One. The game is played from a third-person perspective, and features elements of role-playing games such as character customization and loot. The game's story is told through non-linear levels, and the player can use a variety of weapons and items. The game was met with critical acclaim, with praise directed towards its gameplay, graphics, and story. It was also a commercial success, selling over 2 million copies worldwide by 2019.",
+    "image": "../assets/demonSouls.png",
+    "price": 60,
+    "onSale": true,
+    "discount": 0.2,
+    "rating": 5,
+    "platforms": [
+      "Playstation 5"
+    ],
+    "releaseDate": "November 12, 2020"
+  },
+  {
+    "title": "God of War",
+    "description": "God of War is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment. It is the eighth installment in the God of War series, the eighth chronologically, and the sequel to 2010's God of War III. The game is set in ancient Greece with vengeance as its central motif. Players control Kratos, a Spartan warrior who serves the Greek gods, as he wields the Blades of Chaos against the Olympian Gods. The game is played from a third-person perspective and its world is navigated on foot or by using vehicles such as horses and zeppelins. The story is told through cinematics and gameplay sequences, and players can interact with non-player characters to influence the game's story. The game's combat system is based on combo-based combat, and players can use weapons such as swords, spears, and shields. The game's soundtrack features a score composed by Bear McCreary and a soundtrack featuring over 100 songs from the 1890s to 1910s.",
+    "image": "../assets/godOfWar.png",
+    "price": 60,
+    "onSale": true,
+    "discount": 0.5,
+    "rating": 4.8,
+    "platforms": [
+      "Playstation 4",
+      "PC"
+    ],
+    "releaseDate": "April 20, 2018"
+  },
+  {
+    "title": "Tomb Raider",
+    "description": "Shadow of the Tomb Raider is an action-adventure game developed by Eidos Montréal and published by Square Enix. It is the twelfth main entry in the Tomb Raider series and the sequel to 2015's Rise of the Tomb Raider. The game is set in the fictional South American country of Paititi, where players control Lara Croft as she attempts to stop a Mayan apocalypse. The game is played from a third-person perspective and its world is navigated on foot or by using vehicles such as horses and zeppelins. The story is told through cinematics and gameplay sequences, and players can interact with non-player characters to influence the game's story. The game's combat system is based on combo-based combat, and players can use weapons such as swords, spears, and shields. The game's soundtrack features a score composed by Brian D'Oliveira and a soundtrack featuring over 100 songs from the 1890s to 1910s.",
+    "image": "../assets/shadowOfTheTombRaider.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 3.9,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "September 14, 2018"
+  },
+  {
+    "title": "Gears of War 5",
+    "description": "Gears of War 5 is an upcoming third-person shooter video game developed by The Coalition and published by Xbox Game Studios for Microsoft Windows and Xbox One. It is the fifth mainline entry in the Gears of War series and the sequel to Gears of War 4. The game is set in the fictional world of Sera, where players control Kait Diaz, a member of the Locust-hunting group known as the COG. The game is played from a third-person perspective and its world is navigated on foot or by using vehicles such as horses and zeppelins. The story is told through cinematics and gameplay sequences, and players can interact with non-player characters to influence the game's story. The game's combat system is based on combo-based combat, and players can use weapons such as swords, spears, and shields. The game's soundtrack features a score composed by Brian D'Oliveira and a soundtrack featuring over 100 songs from the 1890s to 1910s.",
+    "image": "../assets/gearsOfWar5.png",
+    "price": 60,
+    "onSale": false,
+    "discount": 0,
+    "rating": 3.2,
+    "platforms": [
+      "PC",
+      "Xbox One"
+    ],
+    "releaseDate": "September 10, 2019"
+  },
+  {
+    "title": "Skyrim",
+    "description": "The Elder Scrolls V: Skyrim is an action role-playing game developed by Bethesda Game Studios and published by Bethesda Softworks. It is the fifth main installment in The Elder Scrolls series, following The Elder Scrolls IV: Oblivion, and was released worldwide for Microsoft Windows, PlayStation 3, and Xbox 360 on November 11, 2011. Skyrim's main story revolves around the player character and their quest to defeat Alduin the World-Eater, a dragon who is prophesied to destroy the world. Over the course of the game, the player completes quests and develops the character by improving skills. The game is noted for its open world design; players may travel anywhere in the game world at any time, and may freely ignore or postpone the main storyline indefinitely. The game continues the open-world tradition of its predecessors by allowing the player to travel anywhere in the game world at any time, and to ignore or postpone the main storyline indefinitely. The game continues the open-world tradition of its predecessors by allowing the player to travel anywhere in the game world at any time, and to ignore or postpone the main storyline indefinitely.",
+    "image": "../assets/skyrim.png",
+    "price": 30,
+    "onSale": false,
+    "discount": 0,
+    "rating": 4.7,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Playstation 4"
+    ],
+    "releaseDate": "November 11, 2011"
   }
 ]

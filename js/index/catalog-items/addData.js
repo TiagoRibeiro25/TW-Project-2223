@@ -1,8 +1,25 @@
 import { catalogData } from "../../getData.js";
 
+// Get most bought games (random)
+const mostBought = [];
+let i = 0;
+while (i < 4) {
+  // get a random item from the catalogData
+  const random = Math.floor(Math.random() * catalogData.length);
+  const item = catalogData[random];
+
+  // check if the item is on sale (since there's a section for that)
+  if (item.onSale) continue;
+  // check if the item is already in the array
+  if (mostBought.includes(item)) continue;
+
+  // add the item to the array
+  mostBought.push(item);
+  i++;
+}
+
 // Add "Most Bought" games to the DOM
-for (let i = 1; i < 5; i++) {
-  const item = catalogData.at(0 - i); // Get the last 4 games from the catalog
+for (const item of mostBought) {
   document.querySelector("#most-bought-catalog").innerHTML += `
     <div class="most-bought-card">
       <img src="${item.image}" alt="${item.title}" loading="lazy"/>
@@ -34,4 +51,3 @@ onSale.forEach((item) => {
     </div>
   `;
 });
-

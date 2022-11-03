@@ -32,7 +32,7 @@ function getAllGames() {
             <h2>${game.title}</h2>
             <h4>Platforms: ${game.platforms}</h4>
             <p>Price: ${game.price}€</p>
-            <button class="buyBtn">Buy</button>
+            <button class="buyBtn" style="margin-top: 37px">Buy</button>
           </div>
           `;
     }
@@ -77,7 +77,7 @@ document.querySelector("#AZ").addEventListener("click", function () {
             <h2>${game.title}</h2>
             <h4>Platforms: ${game.platforms}</h4>
             <p>Price: ${game.price}€</p>
-            <button class="buyBtn">Buy</button>
+            <button class="buyBtn" style="margin-top: 37px">Buy</button>
           </div>
           `;
     }
@@ -122,7 +122,7 @@ document.querySelector("#ZA").addEventListener("click", function () {
             <h2>${game.title}</h2>
             <h4>Platforms: ${game.platforms}</h4>
             <p>Price: ${game.price}€</p>
-            <button class="buyBtn">Buy</button>
+            <button class="buyBtn" style="margin-top: 37px">Buy</button>
           </div>
           `;
     }
@@ -167,7 +167,7 @@ document.querySelector("#priceUp").addEventListener("click", function () {
             <h2>${game.title}</h2>
             <h4>Platforms: ${game.platforms}</h4>
             <p>Price: ${game.price}€</p>
-            <button class="buyBtn">Buy</button>
+            <button class="buyBtn" style="margin-top: 37px">Buy</button>
           </div>
           `;
     }
@@ -214,7 +214,7 @@ document
             <h2>${game.title}</h2>
             <h4>Platforms: ${game.platforms}</h4>
             <p>Price: ${game.price}€</p>
-            <button class="buyBtn">Buy</button>
+            <button class="buyBtn" style="margin-top: 37px">Buy</button>
           </div>
           `;
       }
@@ -238,7 +238,7 @@ document.querySelector("#sales").addEventListener("click", function () {
           <br />
           Price: ${game.price - game.price * game.discount}€
         </p>
-        <button class="buyDiscBtn">Buy</button>
+        <button class="buyDiscBtn" style="margin-top: 37px">Buy</button>
       </div>
       `;
   });
@@ -279,7 +279,7 @@ document.querySelector("#PC").addEventListener("click", function () {
             <h2>${game.title}</h2>
             <h4>Platforms: ${game.platforms}</h4>
             <p>Price: ${game.price}€</p>
-            <button class="buyBtn">Buy</button>
+            <button class="buyBtn" style="margin-top: 37px">Buy</button>
           </div>
           `;
     }
@@ -318,7 +318,7 @@ document.querySelector("#PS").addEventListener("click", function () {
           <h2>${game.title}</h2>
           <h4>Platforms: ${game.platforms}</h4>
           <p>Price: ${game.price}€</p>
-          <button class="buyBtn">Buy</button>
+          <button class="buyBtn" style="margin-top: 37px">Buy</button>
         </div>
         `;
     }
@@ -355,7 +355,7 @@ document.querySelector("#XBOX").addEventListener("click", function () {
           <h2>${game.title}</h2>
           <h4>Platforms: ${game.platforms}</h4>
           <p>Price: ${game.price}€</p>
-          <button class="buyBtn">Buy</button>
+          <button class="buyBtn" style="margin-top: 37px">Buy</button>
         </div>
         `;
     }
@@ -395,7 +395,7 @@ document.querySelector("#myInput").addEventListener("keyup", function () {
               <h2>${game.title}</h2>
               <h4>Platforms: ${game.platforms}</h4>
               <p>Price: ${game.price}€</p>
-              <button class="buyBtn">Buy</button>
+              <button class="buyBtn" style="margin-top: 37px">Buy</button>
             </div>
             `;
         }
