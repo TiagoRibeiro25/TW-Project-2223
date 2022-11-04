@@ -5,6 +5,10 @@
     url("../assets/fonts/comic-webfont.woff") format("woff");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #191919;
   font-family: "Comic Sans MS", cursive, sans-serif;
