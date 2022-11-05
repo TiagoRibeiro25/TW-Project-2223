@@ -42,6 +42,7 @@ export function createUser(newUser) {
   if (isUserValid(newUser)) {
     const users = getUsers();
     newUser.id = getNextId();
+    newUser.cart = [];
     users.push(newUser);
     localStorage.users = JSON.stringify(users);
     return {
