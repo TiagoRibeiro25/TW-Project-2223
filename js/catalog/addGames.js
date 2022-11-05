@@ -1,4 +1,5 @@
 import { catalogData } from "../getData.js";
+import { getUserLogged } from "../users.js";
 
 getAllGames();
 
@@ -32,7 +33,7 @@ function getAllGames() {
             <h2>${game.title}</h2>
             <h4>Platforms: ${game.platforms}</h4>
             <p>Price: ${game.price}€</p>
-            <button class="buyBtn" style="margin-top: 37px">Buy</button>
+            <button class= "buyBtn" style="margin-top: 37px">Buy</button>
           </div>
           `;
     }
@@ -403,3 +404,14 @@ document.querySelector("#myInput").addEventListener("keyup", function () {
     }
   }
 });
+
+let buyButtons = document.querySelectorAll(".buyBtn, .buyDiscBtn")
+
+for (let button = 0; button < buyButtons.length; button++) {
+  buyButtons[button].addEventListener("click", function myFunction() {
+    const userCart = getUserLogged().cart
+    console.log(buyButtons[button]);
+    console.log(userCart); 
+    //userCart.push()
+  })
+}
