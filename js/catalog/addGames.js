@@ -239,7 +239,7 @@ document.querySelector("#sales").addEventListener("click", function () {
           <br />
           Price: ${game.price - game.price * game.discount}€
         </p>
-        <button class="buyDiscBtn" style="margin-top: 37px">Buy</button>
+        <button class="buyDiscBtn" >Buy</button>
       </div>
       `;
   });
@@ -405,13 +405,13 @@ document.querySelector("#myInput").addEventListener("keyup", function () {
   }
 });
 
-let buyButtons = document.querySelectorAll(".buyBtn, .buyDiscBtn")
+let buyButtons = document.querySelectorAll(".buyBtn, .buyDiscBtn");
 
 for (let button = 0; button < buyButtons.length; button++) {
   buyButtons[button].addEventListener("click", function myFunction() {
-    const userCart = getUserLogged().cart
+    const userCart = getUserLogged().cart;
     console.log(buyButtons[button]);
-    console.log(userCart); 
+    console.log(userCart);
     //userCart.push()
-  })
+  });
 }
