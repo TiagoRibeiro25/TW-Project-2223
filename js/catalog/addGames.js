@@ -6,8 +6,8 @@ getAllGames();
 // Add "all games" to the DOM
 function getAllGames() {
   document.querySelector("#all-games-catalog").innerHTML = "";
-  for (let i = 1; i < catalogData.length + 1; i++) {
-    const game = catalogData.at(0 - i);
+  for (let i = 0; i < catalogData.length; i++) {
+    const game = catalogData[i];
 
     if (game.onSale) {
       document.querySelector("#all-games-catalog").innerHTML += `
