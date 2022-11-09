@@ -1,6 +1,5 @@
 import { addEventListenerToBtns } from "../../catalog/addToCart.js";
 import { catalogData } from "../../getData.js";
-import { getUserLogged } from "../../users.js";
 
 // Get most bought games (random)
 const mostBought = [];
