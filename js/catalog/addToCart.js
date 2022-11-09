@@ -1,8 +1,6 @@
 import { addToCart, isUserLogged } from "../users.js";
 
 function addToCardEvent(item) {
-  console.log("clicked");
-
   if (!isUserLogged()) {
     // if there's no user logged in, redirect to the login page
     window.location.href = "../../html/login.html";
@@ -10,8 +8,8 @@ function addToCardEvent(item) {
   }
 
   console.log(`Adding "${item}" to cart...`);
-
   addToCart(item);
+  console.log("Added!");
 }
 
 export function addEventListenerToBtns() {
