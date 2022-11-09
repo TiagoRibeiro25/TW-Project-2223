@@ -143,3 +143,9 @@ function updateData(newUser) {
   users[userIndex] = newUser;
   localStorage.users = JSON.stringify(users);
 }
+
+export function addToCart(item) {
+  const user = getUserLogged();
+  user.cart.push(item);
+  updateData(user);
+}

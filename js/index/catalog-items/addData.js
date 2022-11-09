@@ -1,3 +1,4 @@
+import { addEventListenerToBtns } from "../../catalog/addToCart.js";
 import { catalogData } from "../../getData.js";
 import { getUserLogged } from "../../users.js";
 
@@ -53,40 +54,4 @@ onSale.forEach((item) => {
   `;
 });
 
-let buyButtons = document.querySelectorAll(".buyBtn, .buyDiscBtn")
-
-
-for (let button = 0; button < buyButtons.length; button++) {
-  buyButtons[button].addEventListener("click", function myFunction() {
-    const newUser = getUserLogged()
-    const userCart = newUser.cart
-    
-    if (!userCart.includes(buyButtons[button].id)) {
-        userCart.push(buyButtons[button].id)
-        console.log(userCart);
-        console.log(newUser.cart);
-
-        const users = localStorage.users;
-        const parsedUser = JSON.parse(users)
-        console.log(parsedUser);
-
-        for (let user = 0; user < parsedUser.length; user++) {
-          console.log(parsedUser[user] + " " + newUser);
-
-          if (parsedUser[user].name == newUser.name) {
-            
-            parsedUser[user].cart.push(buyButtons[button].id)
-            sessionStorage.user = JSON.stringify(newUser);
-            console.log(parsedUser[user]);
-            let existing = JSON.parse(localStorage.getItem("users")) 
-            console.log(existing[user]);
-            localStorage.setItem("users" ,JSON.stringify(users))
-              
-          } 
-        }
-
-        
-      }  
-  })
-}
-
+addEventListenerToBtns();
