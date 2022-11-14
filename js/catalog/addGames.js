@@ -1,4 +1,5 @@
 import { catalogData } from "../getData.js";
+import { addEventListenerToBtns } from "./addToCart.js";
 
 function renderCard(game) {
   document.querySelector("#all-games-catalog").innerHTML += game.onSale
@@ -15,7 +16,7 @@ function renderCard(game) {
           <br />
           Price: ${game.price - game.price * game.discount}€
         </p>
-        <button class="buyDiscBtn">Buy</button>
+        <button class="discBtn" id="${game.title}">Buy</button>
       </div>`
     : `
       <div class="all-games-card">
@@ -23,9 +24,11 @@ function renderCard(game) {
         <h2>${game.title}</h2>
         <h4>Platforms: ${game.platforms}</h4>
         <p>Price: ${game.price}€</p>
-        <button class= "buyBtn" style="margin-top: 37px">Buy</button>
+        <button class= "buyBtn" style="margin-top: 37px" id="${game.title}">Buy</button>
       </div>
       `;
+
+  addEventListenerToBtns();
 }
 
 function getAllGames() {
