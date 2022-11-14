@@ -25,4 +25,12 @@ document
       document.querySelector("#form-msg").classList.add("error");
       document.querySelector("#form-msg").classList.remove("success");
     }
+
+    userFunction.logIn(email, password);
+    // wait 3seconds and login the user
+    setTimeout(() => {
+      if (result.success) {
+        window.location.href = "../../html/profile.html";
+      }
+    }, 2000);
   });
