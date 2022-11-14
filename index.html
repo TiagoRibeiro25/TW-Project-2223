@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./styles/main page/about.css" />
     <link rel="stylesheet" href="./styles/main page/madeBy.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/cartNotification.css" />
 
     <!-- JS -->
     <script
@@ -42,6 +43,21 @@
     <script src="./js/cart/buyGame.js" defer></script>
   </head>
   <body>
+    <!-- Added to Cart PopUp -->
+    <div class="added-to-cart-popup" id="cart-popup">
+      <div class="added-to-cart-popup__content">
+        <div class="added-to-cart-popup__content__text">
+          <p id="popup-message">Added to cart</p>
+        </div>
+        <div
+          class="added-to-cart-popup__content__close"
+          id="close-popup-btn"
+        >
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <nav id="navbar">
       <ul class="nav-links">

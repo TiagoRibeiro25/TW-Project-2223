@@ -10,6 +10,19 @@ function addToCardEvent(item) {
   console.log(`Adding "${item}" to cart...`);
   addToCart(item);
   console.log("Added!");
+
+  // show the pop up notification that the item was added to the cart
+  const popup = document.querySelector("#cart-popup");
+  document.querySelector(
+    "#popup-message"
+  ).innerText = `Added "${item}" to cart!`;
+
+  popup.classList.add("show");
+
+  // by default: the popup will be shown for 7 seconds
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 3000);
 }
 
 export function addEventListenerToBtns() {
@@ -25,3 +38,9 @@ export function addEventListenerToBtns() {
     });
   });
 }
+
+document
+  .querySelector("#close-popup-btn")
+  .addEventListener("click", () => {
+    document.querySelector("#cart-popup").classList.remove("show");
+  });
