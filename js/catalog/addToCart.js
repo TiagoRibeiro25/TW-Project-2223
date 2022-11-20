@@ -1,10 +1,6 @@
 import { addToCart, isUserLogged, getUserLogged } from "../users.js";
 
-let user;
 
-if (isUserLogged) {
-  user = getUserLogged();
-}
 
 
 function addToCardEvent(item) {
