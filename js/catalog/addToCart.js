@@ -1,4 +1,11 @@
-import { addToCart, isUserLogged } from "../users.js";
+import { addToCart, isUserLogged, getUserLogged } from "../users.js";
+
+let user;
+
+if (isUserLogged) {
+  user = getUserLogged();
+}
+
 
 function addToCardEvent(item) {
   if (!isUserLogged()) {
@@ -10,13 +17,20 @@ function addToCardEvent(item) {
   console.log(`Adding "${item}" to cart...`);
   addToCart(item);
   console.log("Added!");
-
-  // show the pop up notification that the item was added to the cart
   const popup = document.querySelector("#cart-popup");
-  document.querySelector(
-    "#popup-message"
-  ).innerText = `Added "${item}" to cart!`;
+  // show the pop up notification that the item was added to the cart
+  for (let i = 0; i < user.cart.length; i++) {
+    if (!user.cart.includes(item)) {
+      document.querySelector(
+        "#popup-message"
+      ).innerText = `Added "${item}" to cart!`;    
+    }else {
+      document.querySelector(
+        "#popup-message"
+      ).innerText = `The game "${item}" is already in your cart!`; 
+    }
 
+}
   popup.classList.add("show");
 
   // by default: the popup will be shown for 7 seconds
@@ -29,12 +43,15 @@ export function addEventListenerToBtns() {
   document.querySelectorAll(".buyBtn").forEach((btn) => {
     btn.addEventListener("click", () => {
       addToCardEvent(btn.id);
+      setTimeout(() => {window.location.reload()} , 1000)
+      
     });
   });
 
   document?.querySelectorAll(".discBtn").forEach((btn) => {
     btn.addEventListener("click", () => {
       addToCardEvent(btn.id);
+      setTimeout(() => {window.location.reload()} , 1000)
     });
   });
 }

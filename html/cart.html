@@ -20,6 +20,17 @@
 
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/main page/onSale.css" />
+    <link rel="stylesheet" href="../styles/catalog/allGames.css" />
+
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/catalog/footer.css" />
+    
+
+    <!--JS-->
+    <script type="module" src="../js/cart/cart.js"></script>
+    <script type="module" src="../js/cart/buyGame.js" defer></script>
+
   </head>
   <body>
     <!-- Navbar -->
@@ -30,10 +41,53 @@
           <a href="../html/catalog.html">CATALOG</a>
         </li>
         <li class="nav-link selected">
-          <a href="../html/cart.html">CART</a>
+          <a href="../html/cart.html"><mark class="rubberBand"></mark>CART</a>
         </li>
         <li class="nav-link"><a href="../html/login.html">PROFILE</a></li>
       </ul>
     </nav>
+
+    <section class="all-games-section" id="all-games-section">
+      <h1>My cart</h1>
+      
+      <div class="userCart" id="userCart">
+        <!-- <div class="most-bought-card">
+          <img src="{image}" alt="{title}" />
+          <h2>{title}</h2>
+          <h4>Platform: {platforms}</h4>
+          <p>Price: {price}€</p>
+          <button>Buy</button>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="where-to-find-us">
+        <h1>Where to find us</h1>
+        <div class="where-to-find-us-catalog">
+          <div class="where-to-find-us-card">
+            <i class="fas fa-map"></i>
+            <h2>Address</h2>
+            <p>Rua da Escola Politécnica, 1, 4200-072 Porto, Portugal</p>
+          </div>
+          <div class="where-to-find-us-card">
+            <i class="fas fa-phone"></i>
+            <h2>Phone</h2>
+            <p>+351 222 000 000</p>
+          </div>
+          <div class="where-to-find-us-card">
+            <i class="fas fa-envelope"></i>
+            <h2>Email</h2>
+            <p>online_game_shop@email.pt</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; Online GameShop. All rights reserved.
+      </div>
+    </footer>
+
   </body>
 </html>

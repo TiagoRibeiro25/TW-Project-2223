@@ -146,6 +146,18 @@ function updateData(newUser) {
 
 export function addToCart(item) {
   const user = getUserLogged();
-  user.cart.push(item);
+  for (let i = 0; i < user.cart.length; i++) {
+    if (!user.cart.includes(item)) {
+      user.cart.push(item);
+      updateData(user);
+    }
+    
+  }
+ 
+}
+
+export function removeFromCart(item) {
+  const user = getUserLogged();
+  user.cart.splice(item, 1);
   updateData(user);
 }
