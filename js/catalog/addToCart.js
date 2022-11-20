@@ -1,4 +1,4 @@
-import { addToCart, isUserLogged, getUserLogged } from "../users.js";
+import { addToCart, isUserLogged } from "../users.js";
 
 
 
@@ -57,3 +57,18 @@ document
   .addEventListener("click", () => {
     document.querySelector("#cart-popup").classList.remove("show");
   });
+
+
+if (!isUserLogged()) {
+  document.querySelector("#cartBtn").addEventListener("click", () => {
+    document.querySelector("#cartLink").href ="../../html/login.html"
+  })
+}
+  
+
+  
+
+
+    
+  
+
