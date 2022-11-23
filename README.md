@@ -17,7 +17,7 @@ JavaScript and GIT.
 
 ## Live Demo
 
-[Live Demo](https://tsiw-tw-project-2223.up.railway.app/)
+[Live Demo](https://tsiw-tw-project-2223.netlify.app/)
 
 <!-- school information and course -->
 ## School Information
