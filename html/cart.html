@@ -28,8 +28,13 @@
     
 
     <!--JS-->
+    <script
+      type="module"
+      src="../js/profile/checkIfLogged.js"
+    ></script>
     <script type="module" src="../js/cart/cart.js"></script>
     <script type="module" src="../js/cart/buyGame.js" defer></script>
+    <script type="module" src="../js/catalog/addToCart.js" defer></script>
 
   </head>
   <body>
@@ -40,9 +45,7 @@
         <li class="nav-link">
           <a href="../html/catalog.html">CATALOG</a>
         </li>
-        <li class="nav-link selected">
-          <a href="../html/cart.html"><mark class="rubberBand"></mark>CART</a>
-        </li>
+        <li class="nav-link" id="cartBtn"><a id="cartLink" href="../html/cart.html"><mark class="rubberBand"></mark>CART</a></li>
         <li class="nav-link"><a href="../html/login.html">PROFILE</a></li>
       </ul>
     </nav>
