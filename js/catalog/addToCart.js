@@ -1,6 +1,6 @@
-import { addToCart, isUserLogged } from "../users.js";
+import { addToCart, isUserLogged, getUserLogged} from "../users.js";
 
-
+let user = getUserLogged()
 
 
 function addToCardEvent(item) {
@@ -39,7 +39,7 @@ export function addEventListenerToBtns() {
   document.querySelectorAll(".buyBtn").forEach((btn) => {
     btn.addEventListener("click", () => {
       addToCardEvent(btn.id);
-      setTimeout(() => {window.location.reload()} , 1000)
+      //setTimeout(() => {window.location.reload()} , 1000)
       
     });
   });
@@ -52,23 +52,14 @@ export function addEventListenerToBtns() {
   });
 }
 
-document
-  .querySelector("#close-popup-btn")
-  .addEventListener("click", () => {
-    document.querySelector("#cart-popup").classList.remove("show");
-  });
-
-
 if (!isUserLogged()) {
   document.querySelector("#cartBtn").addEventListener("click", () => {
     document.querySelector("#cartLink").href ="../../html/login.html"
   })
 }
-  
 
-  
-
-
-    
-  
-
+document
+  .querySelector("#close-popup-btn")
+  .addEventListener("click", () => {
+    document.querySelector("#cart-popup").classList.remove("show");
+  });

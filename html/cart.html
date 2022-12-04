@@ -21,10 +21,11 @@
     <link rel="stylesheet" href="../styles/index.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/main page/onSale.css" />
-    <link rel="stylesheet" href="../styles/catalog/allGames.css" />
+    <link rel="stylesheet" href="../styles/cart/cart.css" />
 
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/catalog/footer.css" />
+    <link rel="stylesheet" href="../styles/cartNotification.css" />
     
 
     <!--JS-->
@@ -50,18 +51,30 @@
       </ul>
     </nav>
 
+    <!-- Bought successfully -->
+    <div class="added-to-cart-popup" id="cart-popup">
+      <div class="added-to-cart-popup__content">
+        <div class="added-to-cart-popup__content__text">
+          <p id="popup-message">Your transaction was successfull</p>
+        </div>
+        <div
+          class="added-to-cart-popup__content__close"
+          id="close-popup-btn"
+        >
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+    </div>
+
     <section class="all-games-section" id="all-games-section">
       <h1>My cart</h1>
-      
-      <div class="userCart" id="userCart">
-        <!-- <div class="most-bought-card">
-          <img src="{image}" alt="{title}" />
-          <h2>{title}</h2>
-          <h4>Platform: {platforms}</h4>
-          <p>Price: {price}€</p>
-          <button>Buy</button>
-        </div> -->
+     
+    </section>
+      <div class="cartDiv" id="cartDiv">
+        <table  class="userCart" id="userCart">
+        </table>
       </div>
+      
     </section>
 
     <!-- Footer -->

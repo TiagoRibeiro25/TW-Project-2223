@@ -146,18 +146,34 @@ function updateData(newUser) {
 
 export function addToCart(item) {
   const user = getUserLogged();
-  for (let i = 0; i < user.cart.length; i++) {
-    if (!user.cart.includes(item)) {
-      user.cart.push(item);
-      updateData(user);
-    }
-    
+  if (user.cart.length == 0) {
+    user.cart.push(item);
+    updateData(user);
   }
+  else{
+    for (let i = 0; i < user.cart.length; i++) {
+      if (!user.cart.includes(item)) {
+        user.cart.push(item);
+        updateData(user);
+      }      
+    }
+  }
+
  
 }
 
 export function removeFromCart(item) {
   const user = getUserLogged();
-  user.cart.splice(item, 1);
-  updateData(user);
+  for (let i = 0; i < user.cart.length; i++) {
+    if (user.cart[i] == item) {
+      user.cart.splice(i, 1);
+      updateData(user);
+    }
+  }
+}
+
+export function removeAll() {
+  const user = getUserLogged();
+  user.cart = []
+  updateData(user)
 }
