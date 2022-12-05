@@ -146,20 +146,11 @@ function updateData(newUser) {
 
 export function addToCart(item) {
   const user = getUserLogged();
-  if (user.cart.length == 0) {
-    user.cart.push(item);
-    updateData(user);
-  }
-  else{
-    for (let i = 0; i < user.cart.length; i++) {
-      if (!user.cart.includes(item)) {
-        user.cart.push(item);
-        updateData(user);
-      }      
-    }
-  }
 
- 
+  if (user.cart.includes(item)) return;
+
+  user.cart.push(item);
+  updateData(user);
 }
 
 export function removeFromCart(item) {
@@ -174,6 +165,6 @@ export function removeFromCart(item) {
 
 export function removeAll() {
   const user = getUserLogged();
-  user.cart = []
-  updateData(user)
+  user.cart = [];
+  updateData(user);
 }

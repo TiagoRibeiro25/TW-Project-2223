@@ -17,7 +17,7 @@ document.querySelector("#log-in-form").addEventListener("submit", (e) => {
     document.querySelector("#form-msg").classList.remove("error");
 
     // Add "..." to the message text before redirecting.
-    let i = 3;
+    let i = 2;
     setInterval(() => {
       if (i === 0) window.location.href = "../../html/profile.html";
 

@@ -1,7 +1,4 @@
-import { addToCart, isUserLogged, getUserLogged} from "../users.js";
-
-let user = getUserLogged()
-
+import { addToCart, getUserLogged, isUserLogged } from "../users.js";
 
 function addToCardEvent(item) {
   if (!isUserLogged()) {
@@ -10,23 +7,25 @@ function addToCardEvent(item) {
     return;
   }
 
+  let user = getUserLogged();
+
   console.log(`Adding "${item}" to cart...`);
   addToCart(item);
-  console.log("Added!");
+
   const popup = document.querySelector("#cart-popup");
   // show the pop up notification that the item was added to the cart
-  for (let i = 0; i < user.cart.length; i++) {
-    if (!user.cart.includes(item)) {
-      document.querySelector(
-        "#popup-message"
-      ).innerText = `Added "${item}" to cart!`;    
-    }else {
-      document.querySelector(
-        "#popup-message"
-      ).innerText = `The game "${item}" is already in your cart!`; 
-    }
 
-}
+  if (!user.cart.includes(item)) {
+    document.querySelector(
+      "#popup-message"
+    ).innerText = `Added "${item}" to cart!`;
+    document.querySelector("#rubberBand").innerText++;
+  } else {
+    document.querySelector(
+      "#popup-message"
+    ).innerText = `The game "${item}" is already in your cart!`;
+  }
+
   popup.classList.add("show");
 
   // by default: the popup will be shown for 7 seconds
@@ -36,30 +35,24 @@ function addToCardEvent(item) {
 }
 
 export function addEventListenerToBtns() {
-  document.querySelectorAll(".buyBtn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      addToCardEvent(btn.id);
-      //setTimeout(() => {window.location.reload()} , 1000)
-      
-    });
-  });
+  const btns = [
+    ...document.querySelectorAll(".discBtn"),
+    ...document.querySelectorAll(".buyBtn"),
+  ];
 
-  document?.querySelectorAll(".discBtn").forEach((btn) => {
+  for (const btn of btns) {
     btn.addEventListener("click", () => {
       addToCardEvent(btn.id);
-      setTimeout(() => {window.location.reload()} , 1000)
     });
-  });
+  }
 }
 
 if (!isUserLogged()) {
   document.querySelector("#cartBtn").addEventListener("click", () => {
-    document.querySelector("#cartLink").href ="../../html/login.html"
-  })
+    document.querySelector("#cartLink").href = "../../html/login.html";
+  });
 }
 
-document
-  .querySelector("#close-popup-btn")
-  .addEventListener("click", () => {
-    document.querySelector("#cart-popup").classList.remove("show");
-  });
+document.querySelector("#close-popup-btn").addEventListener("click", () => {
+  document.querySelector("#cart-popup").classList.remove("show");
+});

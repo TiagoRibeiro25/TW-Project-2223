@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Game Shop - Profile</title>
 
     <!-- Favicon -->
@@ -18,22 +15,20 @@
     <link rel="stylesheet" href="../styles/profile/profile.css" />
     <link rel="stylesheet" href="../styles/profile/modal.css" />
 
-    <script
-      type="module"
-      src="../js/profile/checkIfLogged.js"
-      defer
-    ></script>
+    <script type="module" src="../js/profile/checkIfLogged.js" defer></script>
     <script type="module" src="../js/profile/profile.js" defer></script>
     <script type="module" src="../js/cart/buyGame.js" defer></script>
-    
-
   </head>
   <body>
     <nav id="navbar">
       <ul class="nav-links">
         <li class="nav-link"><a href="../index.html">HOME</a></li>
         <li class="nav-link"><a href="catalog.html">CATALOG</a></li>
-        <li class="nav-link" id="cartBtn"><a id="cartLink" href="../html/cart.html"><mark class="rubberBand"></mark>CART</a></li>
+        <li class="nav-link" id="cartBtn">
+          <a id="cartLink" href="../html/cart.html"
+            ><mark class="rubberBand" id="rubberBand"></mark>CART</a
+          >
+        </li>
         <li class="nav-link selected">
           <a href="profile.html">PROFILE</a>
         </li>
@@ -44,11 +39,7 @@
       <h1>Profile</h1>
       <div class="profile-info">
         <div class="profile-image">
-          <img
-            src="../assets/profile.png"
-            alt="Profile Image"
-            loading="lazy"
-          />
+          <img src="../assets/profile.png" alt="Profile Image" loading="lazy" />
         </div>
         <div class="profile-data">
           <p>ID: <span id="profile-id">X</span></p>

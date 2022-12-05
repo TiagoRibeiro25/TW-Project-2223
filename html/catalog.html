@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Game Shop - Catalog</title>
 
     <!-- Favicon -->
@@ -40,11 +37,8 @@
         <div class="added-to-cart-popup__content__text">
           <p id="popup-message">Added to cart</p>
         </div>
-        <div
-          class="added-to-cart-popup__content__close"
-          id="close-popup-btn"
-        >
-          <i class="fas fa-times"></i>
+        <div class="added-to-cart-popup__content__close" id="close-popup-btn">
+          <em class="fas fa-times"></em>
         </div>
       </div>
     </div>
@@ -56,7 +50,11 @@
         <li class="nav-link selected">
           <a href="../html/catalog.html">CATALOG</a>
         </li>
-        <li class="nav-link" id="cartBtn"><a id="cartLink" href="../html/cart.html"><mark class="rubberBand"></mark>CART</a></li>
+        <li class="nav-link" id="cartBtn">
+          <a id="cartLink" href="../html/cart.html"
+            ><mark class="rubberBand" id="rubberBand"></mark>CART</a
+          >
+        </li>
         <li class="nav-link"><a href="../html/login.html">PROFILE</a></li>
       </ul>
     </nav>
@@ -74,11 +72,7 @@
             <h2>PC</h2>
           </div>
           <div id="PS" class="filter-card">
-            <img
-              src="../assets/playstation.png"
-              alt="PS4"
-              loading="lazy"
-            />
+            <img src="../assets/playstation.png" alt="PS4" loading="lazy" />
             <h2>PS</h2>
           </div>
           <div id="XBOX" class="filter-card">
@@ -87,7 +81,7 @@
           </div>
           <div class="filter-card" id="filter-card">
             <button class="dropbtn">
-              <p>Filter <i class="fa-solid fa-chevron-down"></i></p>
+              <p>Filter <em class="fa-solid fa-chevron-down"></em></p>
             </button>
             <div class="dropdown-content">
               <a id="AZ" href="#">A to Z</a>
@@ -97,26 +91,14 @@
             </div>
           </div>
           <div id="search" class="filterBtn">
-            <input
-              type="text"
-              id="myInput"
-              placeholder="Search for names.."
-            />
+            <input type="text" id="myInput" placeholder="Search for names.." />
           </div>
           <div id="reset" class="filterBtn">
             <h2>X</h2>
           </div>
         </div>
       </section>
-      <div class="all-games-catalog" id="all-games-catalog">
-        <!-- <div class="most-bought-card">
-          <img src="{image}" alt="{title}" />
-          <h2>{title}</h2>
-          <h4>Platform: {platforms}</h4>
-          <p>Price: {price}€</p>
-          <button>Buy</button>
-        </div> -->
-      </div>
+      <div class="all-games-catalog" id="all-games-catalog"></div>
     </section>
 
     <!-- Footer -->
@@ -125,17 +107,17 @@
         <h1>Where to find us</h1>
         <div class="where-to-find-us-catalog">
           <div class="where-to-find-us-card">
-            <i class="fas fa-map"></i>
+            <em class="fas fa-map"></em>
             <h2>Address</h2>
             <p>Rua da Escola Politécnica, 1, 4200-072 Porto, Portugal</p>
           </div>
           <div class="where-to-find-us-card">
-            <i class="fas fa-phone"></i>
+            <em class="fas fa-phone"></em>
             <h2>Phone</h2>
             <p>+351 222 000 000</p>
           </div>
           <div class="where-to-find-us-card">
-            <i class="fas fa-envelope"></i>
+            <em class="fas fa-envelope"></em>
             <h2>Email</h2>
             <p>online_game_shop@email.pt</p>
           </div>

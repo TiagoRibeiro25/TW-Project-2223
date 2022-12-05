@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Game Shop</title>
 
     <!-- Favicon -->
@@ -29,10 +26,7 @@
     <link rel="stylesheet" href="./styles/cartNotification.css" />
 
     <!-- JS -->
-    <script
-      src="./js/index/welcome-section/animated-text.js"
-      defer
-    ></script>
+    <script src="./js/index/welcome-section/animated-text.js" defer></script>
     <script
       type="module"
       src="./js/index/catalog-items/addData.js"
@@ -49,11 +43,8 @@
         <div class="added-to-cart-popup__content__text">
           <p id="popup-message">Added to cart</p>
         </div>
-        <div
-          class="added-to-cart-popup__content__close"
-          id="close-popup-btn"
-        >
-          <i class="fas fa-times"></i>
+        <div class="added-to-cart-popup__content__close" id="close-popup-btn">
+          <em class="fas fa-times"></em>
         </div>
       </div>
     </div>
@@ -63,7 +54,11 @@
       <ul class="nav-links">
         <li class="nav-link selected"><a href="./index.html">HOME</a></li>
         <li class="nav-link"><a href="./html/catalog.html">CATALOG</a></li>
-        <li class="nav-link" id="cartBtn"><a id="cartLink" href="./html/cart.html"><mark class="rubberBand"></mark>CART</a></li>
+        <li class="nav-link" id="cartBtn">
+          <a id="cartLink" href="./html/cart.html"
+            ><mark class="rubberBand" id="rubberBand"></mark>CART</a
+          >
+        </li>
         <li class="nav-link"><a href="./html/login.html">PROFILE</a></li>
       </ul>
     </nav>
@@ -83,7 +78,7 @@
           TSIW TW-PROJECT 22/23
           <br />
           <span id="source-code-info" class="invisible"
-            >See the source code <i class="fab fa-github"></i
+            >See the source code <em class="fab fa-github"></em
           ></span>
         </a>
       </div>
@@ -91,7 +86,7 @@
       <!-- scroll down animated icon -->
       <div class="scroll-down">
         <a href="#most-bought-section">
-          <i class="fas fa-chevron-down fa-3x scroll-icon"></i>
+          <em class="fas fa-chevron-down fa-3x scroll-icon"></em>
         </a>
       </div>
     </section>
@@ -99,36 +94,13 @@
     <!-- Most Bought -->
     <section class="most-bought-section" id="most-bought-section">
       <h1>Most Bought</h1>
-      <div class="most-bought-catalog" id="most-bought-catalog">
-        <!-- <div class="most-bought-card">
-          <img src="{image}" alt="{title}" />
-          <h2>{title}</h2>
-          <h4>Platform: {platforms}</h4>
-          <p>Price: {price}€</p>
-          <button>Buy</button>
-        </div> -->
-      </div>
+      <div class="most-bought-catalog" id="most-bought-catalog"></div>
     </section>
 
     <!-- On Sale -->
     <section class="on-sale-section" id="on-sale-section">
       <h1>On Sale</h1>
-      <div class="on-sale-catalog" id="on-sale-catalog">
-        <!-- <div class="on-sale-card">
-          <img src="{image}" alt="{title}" />
-          <h2>{title}</h2>
-          <h4>Platform: {platform/s}</h4>
-          <p>
-            <span class="old-price">{price}€</span>
-            <span class="discount">
-              <i class="fas fa-arrow-down"></i> {discount}%
-            </span>
-            <br />
-            Price: {price with discount}€
-          </p>
-          <button>Buy</button>
-        </div> -->
-      </div>
+      <div class="on-sale-catalog" id="on-sale-catalog"></div>
     </section>
 
     <!-- Filter -->
@@ -156,20 +128,18 @@
       <h1>About Online GameShop</h1>
       <p>
         Online GameShop is a school project made by Tiago Ribeiro and José
-        Nogueira. This project was made for the subject Web Technologies of
-        the course of Technologies and Information Systems for the Web at
-        ESMAD - Escola Superior de Media Artes e Design. The theme of this
-        project is a E-Commerce website, more specifically an online game
-        shop. The main goal of this project is to learn how to use the
-        technologies we have learned in the subject, such as HTML, CSS,
-        JavaScript and GIT.
+        Nogueira. This project was made for the subject Web Technologies of the
+        course of Technologies and Information Systems for the Web at ESMAD -
+        Escola Superior de Media Artes e Design. The theme of this project is a
+        E-Commerce website, more specifically an online game shop. The main goal
+        of this project is to learn how to use the technologies we have learned
+        in the subject, such as HTML, CSS, JavaScript and GIT.
 
         <span>We hope you enjoy our project!</span>
       </p>
 
       <p>
-        If you have time, fill out this survey to help us improve our
-        project!
+        If you have time, fill out this survey to help us improve our project!
       </p>
 
       <!-- Send Feedback Form -->
@@ -192,7 +162,7 @@
           ></textarea>
         </div>
         <span id="form-message">Message sent with success!</span>
-        <button type="submit"><i class="fas fa-envelope"></i> Send</button>
+        <button type="submit"><em class="fas fa-envelope"></em> Send</button>
       </form>
     </section>
 
@@ -202,45 +172,38 @@
       <div class="made-by-catalog">
         <div class="made-by-card">
           <h2>Tiago Ribeiro</h2>
-          <h4>
-            Student Number: <span class="student-number">40210462</span>
-          </h4>
+          <h4>Student Number: <span class="student-number">40210462</span></h4>
           <h4>Course: Technologies and Information Systems for the Web</h4>
           <h4>ESMAD - Escola Superior de Media Artes e Design</h4>
           <div class="made-by-connections">
             <a href="https://github.com/TiagoRibeiro25" target="_blank">
-              <i class="fab fa-github"></i>
+              <em class="fab fa-github"></em>
             </a>
             <a
               href="https://open.spotify.com/user/rgcb95ufripshahmeobrv4i7c"
               target="_blank"
             >
-              <i class="fab fa-spotify"></i>
+              <em class="fab fa-spotify"></em>
             </a>
-            <a
-              href="https://www.freecodecamp.org/25GOLD25"
-              target="_blank"
-            >
-              <i class="fab fa-free-code-camp"></i>
+            <a href="https://www.freecodecamp.org/25GOLD25" target="_blank">
+              <em class="fab fa-free-code-camp"></em>
             </a>
             <a
               href="https://www.youtube.com/channel/UCFNmQr69K_roRLsXl_-2hfg"
               target="_blank"
             >
-              <i class="fab fa-youtube"></i>
+              <em class="fab fa-youtube"></em>
             </a>
           </div>
         </div>
         <div class="made-by-card">
           <h2>José Nogueira</h2>
-          <h4>
-            Student Number: <span class="student-number">40210472</span>
-          </h4>
+          <h4>Student Number: <span class="student-number">40210472</span></h4>
           <h4>Course: Technologies and Information Systems for the Web</h4>
           <h4>ESMAD - Escola Superior de Media Artes e Design</h4>
           <div class="made-by-connections">
             <a href="https://github.com/JoseNogueira13" target="_blank">
-              <i class="fab fa-github"></i>
+              <em class="fab fa-github"></em>
             </a>
           </div>
         </div>
@@ -253,17 +216,17 @@
         <h1>Where to find us</h1>
         <div class="where-to-find-us-catalog">
           <div class="where-to-find-us-card">
-            <i class="fas fa-map"></i>
+            <em class="fas fa-map"></em>
             <h2>Address</h2>
             <p>Rua da Escola Politécnica, 1, 4200-072 Porto, Portugal</p>
           </div>
           <div class="where-to-find-us-card">
-            <i class="fas fa-phone"></i>
+            <em class="fas fa-phone"></em>
             <h2>Phone</h2>
             <p>+351 222 000 000</p>
           </div>
           <div class="where-to-find-us-card">
-            <i class="fas fa-envelope"></i>
+            <em class="fas fa-envelope"></em>
             <h2>Email</h2>
             <p>online_game_shop@email.pt</p>
           </div>

@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Game Shop - Cart</title>
 
     <!-- Favicon -->
@@ -26,17 +23,14 @@
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/catalog/footer.css" />
     <link rel="stylesheet" href="../styles/cartNotification.css" />
-    
+    <link rel="stylesheet" href="../styles/cart/checkout.css" />
 
     <!--JS-->
-    <script
-      type="module"
-      src="../js/profile/checkIfLogged.js"
-    ></script>
+    <script type="module" src="../js/profile/checkIfLogged.js"></script>
     <script type="module" src="../js/cart/cart.js"></script>
     <script type="module" src="../js/cart/buyGame.js" defer></script>
     <script type="module" src="../js/catalog/addToCart.js" defer></script>
-
+    <script type="module" src="../js/cart/checkout.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -46,36 +40,32 @@
         <li class="nav-link">
           <a href="../html/catalog.html">CATALOG</a>
         </li>
-        <li class="nav-link" id="cartBtn"><a id="cartLink" href="../html/cart.html"><mark class="rubberBand"></mark>CART</a></li>
+        <li class="nav-link" id="cartBtn">
+          <a id="cartLink" href="../html/cart.html"
+            ><mark class="rubberBand" id="rubberBand"></mark>CART</a
+          >
+        </li>
         <li class="nav-link"><a href="../html/login.html">PROFILE</a></li>
       </ul>
     </nav>
 
-    <!-- Bought successfully -->
-    <div class="added-to-cart-popup" id="cart-popup">
-      <div class="added-to-cart-popup__content">
-        <div class="added-to-cart-popup__content__text">
-          <p id="popup-message">Your transaction was successfull</p>
-        </div>
-        <div
-          class="added-to-cart-popup__content__close"
-          id="close-popup-btn"
-        >
-          <i class="fas fa-times"></i>
-        </div>
-      </div>
+    <div class="cartDiv" id="cartDiv">
+      <table class="userCart">
+        <caption>
+          My Cart
+        </caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="userCart"></tbody>
+      </table>
     </div>
 
-    <section class="all-games-section" id="all-games-section">
-      <h1>My cart</h1>
-     
-    </section>
-      <div class="cartDiv" id="cartDiv">
-        <table  class="userCart" id="userCart">
-        </table>
-      </div>
-      
-    </section>
+    <button class="checkout-btn" id="checkout-btn">Checkout</button>
 
     <!-- Footer -->
     <footer id="footer">
@@ -83,17 +73,17 @@
         <h1>Where to find us</h1>
         <div class="where-to-find-us-catalog">
           <div class="where-to-find-us-card">
-            <i class="fas fa-map"></i>
+            <em class="fas fa-map"></em>
             <h2>Address</h2>
             <p>Rua da Escola Politécnica, 1, 4200-072 Porto, Portugal</p>
           </div>
           <div class="where-to-find-us-card">
-            <i class="fas fa-phone"></i>
+            <em class="fas fa-phone"></em>
             <h2>Phone</h2>
             <p>+351 222 000 000</p>
           </div>
           <div class="where-to-find-us-card">
-            <i class="fas fa-envelope"></i>
+            <em class="fas fa-envelope"></em>
             <h2>Email</h2>
             <p>online_game_shop@email.pt</p>
           </div>
@@ -105,5 +95,123 @@
       </div>
     </footer>
 
+    <!-- Bought successfully -->
+    <div class="added-to-cart-popup" id="cart-popup">
+      <div class="added-to-cart-popup__content">
+        <div class="added-to-cart-popup__content__text">
+          <p id="popup-message">Your transaction was successfully</p>
+        </div>
+        <div class="added-to-cart-popup__content__close" id="close-popup-btn">
+          <em class="fas fa-times"></em>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal modal-hide" id="checkout-modal">
+      <form class="credit-card">
+        <div class="front">
+          <div class="card-data-row">
+            <div class="brand-name">TSIW Bank</div>
+            <img
+              data-logo
+              src="../assets/checkout icons/visa.svg"
+              class="logo"
+              alt="visa"
+            />
+          </div>
+          <fieldset class="form-group">
+            <legend>Card Number</legend>
+            <label for="cc-1">Card Number</label>
+            <div data-connected-inputs class="cc-inputs horizontal-input-stack">
+              <input
+                type="tel"
+                maxlength="4"
+                aria-label="Credit Card First 4 Digits"
+                id="cc-1"
+                required
+                pattern="[0-9]{4}"
+              />
+              <input
+                type="tel"
+                maxlength="4"
+                aria-label="Credit Card Second 4 Digits"
+                required
+                pattern="[0-9]{4}"
+              />
+              <input
+                type="tel"
+                maxlength="4"
+                aria-label="Credit Card Third 4 Digits"
+                required
+                pattern="[0-9]{4}"
+              />
+              <input
+                type="tel"
+                maxlength="4"
+                aria-label="Credit Card Last 4 Digits"
+                required
+                pattern="[0-9]{4}"
+              />
+            </div>
+          </fieldset>
+          <div class="input-row">
+            <div class="form-group name-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" required />
+            </div>
+            <fieldset class="form-group">
+              <legend>Expiration</legend>
+              <label for="expiration-month">Expiration</label>
+              <div class="horizontal-input-stack">
+                <select
+                  id="expiration-month"
+                  aria-label="Expiration Month"
+                  required
+                >
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                  <option>05</option>
+                  <option>06</option>
+                  <option>07</option>
+                  <option>08</option>
+                  <option>09</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                </select>
+                <select
+                  id="expiration-year"
+                  aria-label="Expiration Year"
+                  required
+                  data-expiration-year
+                ></select>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="back">
+          <div class="stripe"></div>
+          <div class="form-group cvc-group">
+            <label for="cvc">CVC</label>
+            <input
+              class="cvc-input"
+              type="tel"
+              maxlength="3"
+              id="cvc"
+              required
+            />
+          </div>
+        </div>
+      </form>
+
+      <!-- Cancel button -->
+      <button class="cancel-btn" id="cancel-btn">Cancel</button>
+
+      <!-- Purchase button -->
+      <button class="purchase-btn" id="purchase-btn">Purchase</button>
+    </div>
   </body>
 </html>

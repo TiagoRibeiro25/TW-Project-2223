@@ -33,8 +33,7 @@ function renderCard(game) {
 
 function getAllGames() {
   document.querySelector("#all-games-catalog").innerHTML = "";
-  for (let i = 0; i < catalogData.length; i++) {
-    const game = catalogData[i];
+  for (const game of catalogData) {
     renderCard(game);
   }
 }
@@ -128,9 +127,7 @@ document.querySelector("#reset").addEventListener("click", function () {
 
 document.querySelector("#PC").addEventListener("click", function () {
   document.querySelector("#all-games-catalog").innerHTML = "";
-  const platforms = catalogData.filter((game) =>
-    game.platforms.includes("PC")
-  );
+  const platforms = catalogData.filter((game) => game.platforms.includes("PC"));
   platforms.forEach((game) => {
     renderCard(game);
   });
@@ -159,14 +156,19 @@ document.querySelector("#XBOX").addEventListener("click", function () {
 });
 
 document.querySelector("#myInput").addEventListener("keyup", function () {
-  if (document.getElementById("myInput").value.toUpperCase() != null) {
+  if (document.getElementById("myInput").value.toUpperCase() !== null) {
     document.querySelector("#all-games-catalog").innerHTML = "";
     let input = document.getElementById("myInput").value.toUpperCase();
-    for (let i = 0; i < catalogData.length; i++) {
-      if (catalogData[i].title.toUpperCase().includes(input)) {
-        let game = catalogData[i];
+    for (const game of catalogData) {
+      if (game.title.toUpperCase().includes(input)) {
         renderCard(game);
       }
     }
+  }
+
+  // if there's no results, show custom message
+  if (document.querySelector("#all-games-catalog").innerHTML === "") {
+    document.querySelector("#all-games-catalog").innerHTML =
+      "<h1 style='text-align: center; margin-top: 150px; margin-bottom: 100px'>No results found</h1>";
   }
 });
