@@ -47,6 +47,7 @@
 
 .all-cart-content td button {
   width: 80%;
+  min-width: 100px;
   height: 40px;
   top: 50%;
   transform: translateY(-50%);
@@ -76,11 +77,12 @@
   border-radius: 10px;
   margin-top: 15px;
   margin-bottom: 25px;
+  margin-left: 40%;
   width: 20%;
+  min-width: 120px;
   height: 45px;
   font-size: 1.3rem;
   transition: 0.5s;
-  margin-left: 40%;
 }
 
 .checkout-btn:hover {
@@ -89,4 +91,17 @@
   text-shadow: none;
   cursor: pointer;
   transition: 0.5s;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .userCart {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .checkout-btn {
+    margin-left: 35%;
+  }
 }

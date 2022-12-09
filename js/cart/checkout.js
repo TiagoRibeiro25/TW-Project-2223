@@ -3,6 +3,7 @@ import { removeAll } from "../users.js";
 const expirationSelect = document.querySelector("[data-expiration-year]");
 const logo = document.querySelector("[data-logo]");
 
+// Create the expiration year options
 const currentYear = new Date().getFullYear();
 for (let i = currentYear; i < currentYear + 10; i++) {
   const option = document.createElement("option");
@@ -40,20 +41,6 @@ document.addEventListener("keydown", (e) => {
       }
       break;
     }
-    case "Delete": {
-      if (
-        input.selectionStart === input.value.length &&
-        input.selectionEnd === input.value.length
-      ) {
-        const next = input.nextElementSibling;
-        next.value = next.value.substring(1, next.value.length);
-        next.focus();
-        next.selectionStart = 0;
-        next.selectionEnd = 0;
-        e.preventDefault();
-      }
-      break;
-    }
     case "Backspace": {
       if (input.selectionStart === 0 && input.selectionEnd === 0) {
         const prev = input.previousElementSibling;
@@ -76,6 +63,8 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// When pasting, check if the pasted value is a number
+// and then put 4 digits in each input
 document.addEventListener("paste", (e) => {
   const input = e.target;
   const data = e.clipboardData.getData("text");
@@ -135,10 +124,12 @@ function isConnectedInput(input) {
   return input.matches("input") && parent != null;
 }
 
+// Cancel purchase (close modal)
 document.querySelector("#cancel-btn").addEventListener("click", () => {
   document.querySelector("#checkout-modal").classList.add("modal-hide");
 });
 
+// Purchase (delete all items from cart + close modal)
 document.querySelector("#purchase-btn").addEventListener("click", () => {
   document.querySelector("#checkout-modal").classList.add("modal-hide");
 
