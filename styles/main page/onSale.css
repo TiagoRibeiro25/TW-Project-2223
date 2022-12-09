@@ -5,7 +5,7 @@
   padding-bottom: 80px;
 }
 
-.on-sale-section > h1 {
+.on-sale-section h1 {
   font-size: 2rem;
   margin-left: 10%;
   text-decoration: underline;
@@ -30,7 +30,7 @@
   transition: 0.5s;
 }
 
-.on-sale-card > img {
+.on-sale-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -39,17 +39,17 @@
   box-shadow: 0 0 5px #000;
 }
 
-.on-sale-card > h2 {
+.on-sale-card h2 {
   text-decoration: underline;
 }
 
-.on-sale-card > p {
+.on-sale-card p {
   font-size: 1.5rem;
   margin-top: -20px;
   padding: 0;
 }
 
-.on-sale-card > button {
+.on-sale-card button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +72,7 @@
   transition: 0.5s;
 }
 
-.on-sale-card > button:hover {
+.on-sale-card button:hover {
   background-color: yellow;
   color: black;
   text-shadow: none;

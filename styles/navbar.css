@@ -22,7 +22,7 @@ nav {
   width: 25%;
 }
 
-.nav-link > a {
+.nav-link a {
   display: block;
   color: yellow;
   text-align: center;
@@ -33,7 +33,7 @@ nav {
   transition: 0.3s;
 }
 
-.nav-link > a:hover {
+.nav-link a:hover {
   color: white;
   text-decoration: underline;
   scale: 1.1;
@@ -56,113 +56,113 @@ nav {
   }
 }
 
-ul > li > a > mark {
+ul li a mark {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px;   
-  border: 2px solid #FFF;
+  border-radius: 20px;
+  border: 2px solid #fff;
   width: 20px;
-  height: 20px;  
-  background-color: #FF6B6B;
+  height: 20px;
+  background-color: #ff6b6b;
   position: absolute;
   top: 3px;
   margin-left: 45px;
   font-size: 10px;
   line-height: 20px;
   font-weight: 400;
-  color: #FFF;
+  color: #fff;
   font-weight: 700;
 }
 
-ul > li > a > mark {
+ul li a mark {
   -webkit-animation-name: bounceIn;
-          animation-name: bounceIn;
+  animation-name: bounceIn;
   -webkit-transform-origin: center bottom;
-      -ms-transform-origin: center bottom;
-          transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;   
+  animation-fill-mode: both;
   -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
-ul > li:hover > a > mark.rubberBand {
+ul li:hover a mark.rubberBand {
   -webkit-animation-name: rubberBand;
-          animation-name: rubberBand;
+  animation-name: rubberBand;
 }
 
 @-webkit-keyframes rubberBand {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 
   30% {
     -webkit-transform: scale3d(1.25, 0.75, 1);
-            transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
   }
 
   40% {
     -webkit-transform: scale3d(0.75, 1.25, 1);
-            transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
   }
 
   50% {
     -webkit-transform: scale3d(1.15, 0.85, 1);
-            transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
   }
 
   65% {
-    -webkit-transform: scale3d(.95, 1.05, 1);
-            transform: scale3d(.95, 1.05, 1);
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
   }
 
   75% {
-    -webkit-transform: scale3d(1.05, .95, 1);
-            transform: scale3d(1.05, .95, 1);
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
 
   100% {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
 @keyframes rubberBand {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 
   30% {
     -webkit-transform: scale3d(1.25, 0.75, 1);
-            transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
   }
 
   40% {
     -webkit-transform: scale3d(0.75, 1.25, 1);
-            transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
   }
 
   50% {
     -webkit-transform: scale3d(1.15, 0.85, 1);
-            transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
   }
 
   65% {
-    -webkit-transform: scale3d(.95, 1.05, 1);
-            transform: scale3d(.95, 1.05, 1);
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
   }
 
   75% {
-    -webkit-transform: scale3d(1.05, .95, 1);
-            transform: scale3d(1.05, .95, 1);
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
 
   100% {
     -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }

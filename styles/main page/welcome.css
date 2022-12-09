@@ -14,14 +14,14 @@
   margin-top: -150px;
 }
 
-.welcome-info > h1 {
+.welcome-info h1 {
   font-size: 5rem;
   margin: 0;
   animation: wave 5s infinite;
   padding: 50px;
 }
 
-.welcome-info > h3 {
+.welcome-info h3 {
   font-size: 2rem;
   margin: 0;
   padding: 50px;
@@ -96,24 +96,24 @@
 }
 
 @media (max-width: 770px) or (max-height: 600px) {
-  .welcome-info > h1 {
+  .welcome-info h1 {
     font-size: 3rem;
   }
 
-  .welcome-info > h3 {
+  .welcome-info h3 {
     margin-top: -20px;
     font-size: 1.5rem;
   }
 }
 
 @media (max-height: 430px) {
-  .welcome-info > h1 {
+  .welcome-info h1 {
     font-size: 2rem;
     padding: 20px;
     padding-bottom: 0;
   }
 
-  .welcome-info > h3 {
+  .welcome-info h3 {
     margin-top: -20px;
     font-size: 1rem;
   }

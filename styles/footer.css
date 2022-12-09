@@ -12,7 +12,7 @@ footer {
   margin-top: 20px;
 }
 
-.where-to-find-us > h1 {
+.where-to-find-us h1 {
   font-size: 1.5rem;
   text-decoration: underline;
   margin-left: 10%;
@@ -52,7 +52,7 @@ footer {
   margin-top: 30px;
 }
 
-.where-to-find-us-card > p:hover {
+.where-to-find-us-card p:hover {
   color: white;
   text-decoration: underline;
 }
@@ -63,7 +63,7 @@ footer {
   align-items: center;
   margin-top: 20px;
 }
-.page-sections > a {
+.page-sections a {
   text-decoration: none;
   color: yellow;
   font-size: 1rem;
@@ -72,7 +72,7 @@ footer {
   margin-left: 10px;
 }
 
-.page-sections > a:hover {
+.page-sections a:hover {
   color: white;
   text-decoration: underline;
 }

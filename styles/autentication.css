@@ -10,13 +10,13 @@ section {
   margin-top: 120px;
 }
 
-section > h1 {
+section h1 {
   font-size: 30px;
   margin-bottom: 30px;
   margin-top: 0;
 }
 
-form > label {
+form label {
   margin-bottom: 10px;
 }
 
@@ -62,7 +62,7 @@ form > label {
   display: block;
 }
 
-form > input[type="submit"] {
+form input[type="submit"] {
   background-color: #333;
   color: yellow;
   font-size: 20px;
@@ -76,7 +76,7 @@ form > input[type="submit"] {
   transition: 0.5s;
 }
 
-form > input[type="submit"]:hover {
+form input[type="submit"]:hover {
   background-color: yellow;
   color: #333;
   border: 1px solid #333;
@@ -91,12 +91,12 @@ form > input[type="submit"]:hover {
   margin-bottom: -20px;
 }
 
-.sign > a {
+.sign a {
   color: white;
   text-decoration: none;
 }
 
-.sign > a:hover {
+.sign a:hover {
   text-decoration: underline;
 }
 
@@ -108,7 +108,7 @@ form > input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 500px) {
-  form > input[type="submit"] {
+  form input[type="submit"] {
     width: 70%;
   }
 }

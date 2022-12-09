@@ -10,7 +10,7 @@ section {
   margin-top: 120px;
 }
 
-section > h1 {
+section h1 {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -30,7 +30,7 @@ section > h1 {
   margin-right: 20px;
 }
 
-.profile-image > img {
+.profile-image img {
   width: 190px;
   border-radius: 50%;
   border: 2px solid #000;
@@ -43,7 +43,7 @@ section > h1 {
   align-items: flex-start;
 }
 
-.profile-data > p {
+.profile-data p {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -58,7 +58,7 @@ section > h1 {
   align-items: center;
 }
 
-.profile-buttons > button {
+.profile-buttons button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -72,7 +72,7 @@ section > h1 {
   transition: 0.5s;
 }
 
-.profile-buttons > button:hover {
+.profile-buttons button:hover {
   background-color: yellow;
   color: #000;
   cursor: pointer;
@@ -90,7 +90,7 @@ section > h1 {
     height: auto;
   }
 
-  .profile-image > img {
+  .profile-image img {
     width: 100%;
   }
 }
@@ -115,7 +115,7 @@ section > h1 {
 }
 
 @media screen and (max-width: 405px) {
-  .profile-buttons > button {
+  .profile-buttons button {
     font-size: 16px;
   }
 }

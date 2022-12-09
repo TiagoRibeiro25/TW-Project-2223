@@ -5,13 +5,13 @@
   padding-bottom: 80px;
 }
 
-.about-section > h1 {
+.about-section h1 {
   font-size: 2rem;
   margin-left: 10%;
   text-decoration: underline;
 }
 
-.about-section > p {
+.about-section p {
   margin: 0 auto;
   width: 80%;
   font-size: 1.2rem;
@@ -19,7 +19,7 @@
   margin-top: 50px;
 }
 
-.about-section > p > span {
+.about-section p span {
   display: block;
   margin-top: 40px;
   font-size: 1.5rem;
@@ -38,22 +38,22 @@ form {
   margin-top: 20px;
 }
 
-.form-group > label {
+.form-group label {
   display: block;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.form-group > input {
+.form-group input {
   height: 30px;
 }
 
-.form-group > textarea {
+.form-group textarea {
   height: 100px;
 }
 
-.form-group > input,
-.form-group > textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   font-size: 1.2rem;
   padding: 5px;
@@ -62,20 +62,20 @@ form {
   transition: 0.3s;
 }
 
-.form-group > input:hover,
-.form-group > textarea:hover {
+.form-group input:hover,
+.form-group textarea:hover {
   box-shadow: 0 0 10px yellow;
   transition: 0.3s;
 }
 
-.form-group > input:focus,
-.form-group > textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   box-shadow: 0 0 15px yellow;
   transition: 0.2s;
 }
 
-form > button {
+form button {
   margin: 0 auto;
   display: block;
   width: 101.8%;
@@ -89,7 +89,7 @@ form > button {
   transition: all 0.3s ease;
 }
 
-form > button:hover {
+form button:hover {
   background-color: yellow;
   color: #191919;
   scale: 1.01;
@@ -97,7 +97,7 @@ form > button:hover {
   cursor: pointer;
 }
 
-form > span {
+form span {
   display: block;
   margin-top: 20px;
   font-size: 1.2rem;

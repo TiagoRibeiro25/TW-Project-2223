@@ -41,26 +41,26 @@
   cursor: pointer;
 }
 
-.modal-content > h2 {
+.modal-content h2 {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.modal-content > form {
+.modal-content form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.modal-content > form > label {
+.modal-content form label {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.modal-content > form > input {
+.modal-content form input {
   width: 100%;
   height: 40px;
   border: none;
@@ -73,17 +73,17 @@
   transition: 0.3s;
 }
 
-.modal-content > form > input:hover {
+.modal-content form input:hover {
   box-shadow: 0 0 10px yellow;
   transition: 0.3s;
 }
-.modal-content > form > input:focus {
+.modal-content form input:focus {
   outline: none;
   box-shadow: 0 0 17px yellow;
   transition: 0.3s;
 }
 
-.modal-content > form > button {
+.modal-content form button {
   width: 100%;
   height: 40px;
   border: none;
@@ -96,7 +96,7 @@
   transition: 0.5s;
 }
 
-.modal-content > form > button:hover {
+.modal-content form button:hover {
   background-color: yellow;
   color: #000;
   cursor: pointer;
@@ -123,14 +123,14 @@
     height: 530px;
   }
 
-  .modal-content > form > label {
+  .modal-content form label {
     font-size: 20px;
   }
-  .modal-content > form > input {
+  .modal-content form input {
     height: 35px;
     font-size: 16px;
   }
-  .modal-content > form > button {
+  .modal-content form button {
     height: 35px;
     font-size: 16px;
   }
@@ -141,17 +141,17 @@
     height: 480px;
   }
 
-  .modal-content > h2 {
+  .modal-content h2 {
     margin-top: 10px;
   }
 
-  .modal-content > form > button {
+  .modal-content form button {
     margin-top: 0;
   }
 }
 
 @media screen and (max-height: 550px) {
-  .modal-content > h2 {
+  .modal-content h2 {
     font-size: 25px;
     margin-bottom: 10px;
   }
