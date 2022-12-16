@@ -3,8 +3,11 @@
  * @returns The data is being returned.
  */
 async function getData() {
-  const response = await fetch("../../data/data.json");
-  const data = await response.json();
+  const data = await fetch("../../data/data.json")
+    .then((res) => res.json())
+    .then((data) => data)
+    .catch((err) => console.error(err));
+
   return data;
 }
 
