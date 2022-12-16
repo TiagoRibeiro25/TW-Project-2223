@@ -23,11 +23,11 @@ function renderCard(game) {
      `;
 }
 
-function renderTotalPrice() {
+function updateTotalPrice() {
   let totalPrice = 0;
   for (const cartElement of user.cart) {
     for (const catalogElement of catalogData) {
-      if (catalogElement.title == cartElement) {
+      if (catalogElement.title === cartElement) {
         totalPrice += catalogElement.onSale
           ? catalogElement.price -
             catalogElement.price * catalogElement.discount
@@ -36,12 +36,7 @@ function renderTotalPrice() {
     }
   }
 
-  document.querySelector("#userCart").innerHTML += `
-    <tr class="all-cart-content">
-      <td>Total Price</td>
-      <td colspan = "2">${totalPrice}€</td>
-    </tr>
-  `;
+  document.querySelector("#totalPrice").innerText = `${totalPrice}€`;
 }
 
 function updateCheckoutBtn() {
@@ -67,8 +62,14 @@ else {
       }
     }
   }
-  // show total price
-  renderTotalPrice();
+
+  document.querySelector("#userCart").innerHTML += `
+    <tr class="all-cart-content">
+      <td>Total Price</td>
+      <td colspan = "2" id="totalPrice"></td>
+    </tr>
+  `;
+  updateTotalPrice();
 }
 
 updateCheckoutBtn();
@@ -81,6 +82,7 @@ document.querySelectorAll(".removeBtn").forEach((btn) => {
     if (user.cart.length == 0) renderIfEmpty();
     updateCheckoutBtn();
     document.querySelector("#rubberBand").innerText--;
+    updateTotalPrice();
   });
 });
 

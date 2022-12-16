@@ -1,10 +1,13 @@
+const PRE_KEY = "game-store-";
+
 /**
  * It returns the users from localStorage if it exists, otherwise it returns an array with one user.
  * @returns An array of objects.
  */
 export function getUsers() {
-  return localStorage.users
-    ? JSON.parse(localStorage.users)
+  const key = PRE_KEY + "users";
+  return localStorage[key]
+    ? JSON.parse(localStorage[key])
     : [
         {
           id: 1,
@@ -44,7 +47,10 @@ export function createUser(newUser) {
     newUser.id = getNextId();
     newUser.cart = [];
     users.push(newUser);
-    localStorage.users = JSON.stringify(users);
+
+    const key = PRE_KEY + "users";
+
+    localStorage[key] = JSON.stringify(users);
     return {
       success: true,
       message: `User ${newUser.name} created successfully.`,
@@ -69,7 +75,9 @@ export function logIn(email, password) {
     (user) => user.email === email && user.password === password
   );
   if (user) {
-    sessionStorage.user = JSON.stringify(user);
+    const key = PRE_KEY + "user";
+
+    sessionStorage[key] = JSON.stringify(user);
     return {
       success: true,
       message: `Welcome back, ${user.name}`,
@@ -85,7 +93,9 @@ export function logIn(email, password) {
  * It removes the user from the session storage.
  */
 export function logOut() {
-  sessionStorage.removeItem("user");
+  const key = PRE_KEY + "user";
+
+  sessionStorage.removeItem(key);
 }
 
 /**
@@ -93,7 +103,8 @@ export function logOut() {
  * @returns A function that returns a boolean value.
  */
 export function isUserLogged() {
-  return sessionStorage.user;
+  const key = PRE_KEY + "user";
+  return sessionStorage[key];
 }
 
 /**
@@ -101,7 +112,8 @@ export function isUserLogged() {
  * @returns The user object.
  */
 export function getUserLogged() {
-  return JSON.parse(sessionStorage.user);
+  const key = PRE_KEY + "user";
+  return JSON.parse(sessionStorage[key]);
 }
 
 /**
@@ -133,15 +145,19 @@ export function updateUser(newUser) {
  * the session storage and local storage.
  */
 function updateData(newUser) {
+  let key = PRE_KEY + "user";
+
   // Update Session Storage (current user logged in)
-  sessionStorage.user = JSON.stringify(newUser);
+  sessionStorage[key] = JSON.stringify(newUser);
 
   const users = getUsers();
 
   // Update Local Storage
   const userIndex = users.findIndex((user) => user.id === newUser.id);
   users[userIndex] = newUser;
-  localStorage.users = JSON.stringify(users);
+
+  key = PRE_KEY + "users";
+  localStorage[key] = JSON.stringify(users);
 }
 
 export function addToCart(item) {
