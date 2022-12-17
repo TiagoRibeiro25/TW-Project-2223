@@ -112,7 +112,7 @@ document.querySelector("#priceDown").addEventListener("click", () => {
   }
 });
 
-document.querySelector("#sales").addEventListener("click", function () {
+document.querySelector("#sales").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
   const onSale = catalogData.filter((game) => game.onSale);
   onSale.forEach((game) => {
@@ -120,12 +120,12 @@ document.querySelector("#sales").addEventListener("click", function () {
   });
 });
 
-document.querySelector("#reset").addEventListener("click", function () {
+document.querySelector("#reset").addEventListener("click", () => {
   getAllGames();
   document.querySelector("#myInput").value = "";
 });
 
-document.querySelector("#PC").addEventListener("click", function () {
+document.querySelector("#PC").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
   const platforms = catalogData.filter((game) => game.platforms.includes("PC"));
   platforms.forEach((game) => {
@@ -133,7 +133,7 @@ document.querySelector("#PC").addEventListener("click", function () {
   });
 });
 
-document.querySelector("#PS").addEventListener("click", function () {
+document.querySelector("#PS").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
   const platforms = catalogData.filter(
     (game) =>
@@ -145,7 +145,7 @@ document.querySelector("#PS").addEventListener("click", function () {
   });
 });
 
-document.querySelector("#XBOX").addEventListener("click", function () {
+document.querySelector("#XBOX").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
   const platforms = catalogData.filter((game) =>
     game.platforms.includes("Xbox One")
@@ -155,7 +155,7 @@ document.querySelector("#XBOX").addEventListener("click", function () {
   });
 });
 
-document.querySelector("#myInput").addEventListener("keyup", function () {
+document.querySelector("#myInput").addEventListener("keyup", () => {
   if (document.getElementById("myInput").value.toUpperCase() !== null) {
     document.querySelector("#all-games-catalog").innerHTML = "";
     let input = document.getElementById("myInput").value.toUpperCase();
@@ -168,7 +168,10 @@ document.querySelector("#myInput").addEventListener("keyup", function () {
 
   // if there's no results, show custom message
   if (document.querySelector("#all-games-catalog").innerHTML === "") {
-    document.querySelector("#all-games-catalog").innerHTML =
-      "<h1 style='text-align: center; margin-top: 150px; margin-bottom: 100px'>No results found</h1>";
+    document.querySelector("#all-games-catalog").innerHTML = `
+      <h1 class="title-not-found">
+        No results found
+      </h1>
+    `;
   }
 });

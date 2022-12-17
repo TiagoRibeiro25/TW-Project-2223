@@ -177,3 +177,14 @@
   color: yellow;
   font-size: 1.3rem;
 }
+
+.title-not-found {
+  color: yellow;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+  margin: 0 auto;
+  text-align: center;
+  width: 68%;
+  padding: 100px;
+}
