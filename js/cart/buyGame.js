@@ -8,7 +8,7 @@ if (isUserLogged()) {
 
 export function cartNotification() {
   let mark = document.querySelector("#rubberBand");
-  if (!isUserLogged() || user.cart.length == 0) {
+  if (!isUserLogged()) {
     mark.style.display = "none";
   } else {
     mark.innerText = user.cart.length;

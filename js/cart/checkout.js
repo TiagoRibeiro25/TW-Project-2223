@@ -14,54 +14,64 @@ for (let i = currentYear; i < currentYear + 10; i++) {
 
 document.addEventListener("keydown", (e) => {
   const input = e.target;
-  const key = e.key;
   if (!isConnectedInput(input)) return;
 
-  switch (key) {
-    case "ArrowLeft": {
+  switch (e.key) {
+    case "ArrowLeft":
       if (input.selectionStart === 0 && input.selectionEnd === 0) {
-        const prev = input.previousElementSibling;
-        prev.focus();
-        prev.selectionStart = prev.value.length - 1;
-        prev.selectionEnd = prev.value.length - 1;
-        e.preventDefault();
+        handleArrowLeft(input, e);
       }
       break;
-    }
-    case "ArrowRight": {
+    case "ArrowRight":
       if (
         input.selectionStart === input.value.length &&
         input.selectionEnd === input.value.length
       ) {
-        const next = input.nextElementSibling;
-        next.focus();
-        next.selectionStart = 1;
-        next.selectionEnd = 1;
-        e.preventDefault();
+        handleArrowRight(input, e);
       }
       break;
-    }
-    case "Backspace": {
+    case "Backspace":
       if (input.selectionStart === 0 && input.selectionEnd === 0) {
-        const prev = input.previousElementSibling;
-        prev.value = prev.value.substring(0, prev.value.length - 1);
-        prev.focus();
-        prev.selectionStart = prev.value.length;
-        prev.selectionEnd = prev.value.length;
-        e.preventDefault();
+        handleBackspace(input, e);
       }
       break;
-    }
-    default: {
-      if (e.ctrlKey || e.altKey) return;
-      if (key.length > 1) return;
-      if (key.match(/^[^0-9]$/)) return e.preventDefault();
-
-      e.preventDefault();
-      onInputChange(input, key);
-    }
+    default:
+      if (
+        !e.ctrlKey &&
+        !e.altKey &&
+        e.key.length === 1 &&
+        e.key.match(/^\d$/)
+      ) {
+        e.preventDefault();
+        onInputChange(input, e.key);
+      }
   }
 });
+
+function handleArrowLeft(input, e) {
+  const prev = input.previousElementSibling;
+  prev.focus();
+  prev.selectionStart = prev.value.length - 1;
+  prev.selectionEnd = prev.value.length - 1;
+  e.preventDefault();
+}
+
+function handleArrowRight(input, e) {
+  const next = input.nextElementSibling;
+  next.focus();
+  next.selectionStart = 1;
+  next.selectionEnd = 1;
+  e.preventDefault();
+}
+
+function handleBackspace(input, e) {
+  const prev = input.previousElementSibling;
+  prev.value = prev.value.substring(0, prev.value.length - 1);
+  prev.focus();
+  prev.selectionStart = prev.value.length;
+  prev.selectionEnd = prev.value.length;
+  e.preventDefault();
+}
 
 // When pasting, check if the pasted value is a number
 // and then put 4 digits in each input
@@ -144,5 +154,5 @@ document.querySelector("#purchase-btn").addEventListener("click", () => {
   setTimeout(() => {
     document.querySelector("#cart-popup").classList.remove("show");
     window.location.reload();
-  }, 3000);
+  }, 2000);
 });
