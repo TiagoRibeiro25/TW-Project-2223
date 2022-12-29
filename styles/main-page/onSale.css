@@ -37,9 +37,17 @@
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 0 0 5px #000;
+  margin-bottom: 15px;
 }
 
-.on-sale-card h2 {
+.on-sale-card a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.on-sale-card a:hover {
   text-decoration: underline;
 }
 
@@ -65,16 +73,13 @@
 }
 
 .on-sale-card:hover {
-  background-color: #000;
   box-shadow: 0 0 10px yellow;
-  color: yellow;
   scale: 1.05;
   transition: 0.5s;
 }
 
 .on-sale-card button:hover {
-  background-color: yellow;
-  color: black;
+  text-decoration: underline;
   text-shadow: none;
   cursor: pointer;
   transition: 0.5s;

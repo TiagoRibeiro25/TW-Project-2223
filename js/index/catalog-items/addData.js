@@ -24,10 +24,10 @@ for (const item of mostBought) {
   document.querySelector("#most-bought-catalog").innerHTML += `
     <div class="most-bought-card">
       <img src="${item.image}" alt="${item.title}" loading="lazy"/>
-      <h2>${item.title}</h2>
+      <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
       <h4>Platforms: ${item.platforms}</h4>
       <p>Price: ${item.price}€</p>
-      <button id="${item.title}" class= "buyBtn">Buy</button>
+      <button id="${item.title}" class= "buyBtn">Add to Cart</button>
     </div>
   `;
 }
@@ -38,7 +38,7 @@ onSale.forEach((item) => {
   document.querySelector("#on-sale-catalog").innerHTML += `
     <div class="on-sale-card">
       <img src="${item.image}" alt="${item.title}" loading="lazy"/>
-      <h2>${item.title}</h2>
+      <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
       <h4>Platform: ${item.platforms.at(2)}</h4>
       <p>
         <span class="old-price">${item.price}€</span>
@@ -48,7 +48,7 @@ onSale.forEach((item) => {
         <br />
         Price: ${item.price - item.price * item.discount}€
       </p>
-      <button id="${item.title}" class = "buyBtn">Buy</button>
+      <button id="${item.title}" class = "buyBtn">Add to Cart</button>
     </div>
   `;
 });

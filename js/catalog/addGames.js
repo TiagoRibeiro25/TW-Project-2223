@@ -1,30 +1,30 @@
 import { catalogData } from "../getData.js";
 import { addEventListenerToBtns } from "./addToCart.js";
 
-function renderCard(game) {
-  document.querySelector("#all-games-catalog").innerHTML += game.onSale
+function renderCard(item) {
+  document.querySelector("#all-games-catalog").innerHTML += item.onSale
     ? `
       <div class="all-games-card">
-        <img src="${game.image}" alt="${game.title}" loading="lazy"/>
-        <h2>${game.title}</h2>
-        <h4>Platforms: ${game.platforms}</h4>
+        <img src="${item.image}" alt="${item.title}" loading="lazy"/>
+        <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
+        <h4>Platforms: ${item.platforms}</h4>
         <p>
-          <span class="old-price">${game.price}€</span>
+          <span class="old-price">${item.price}€</span>
           <span class="discount">
-            <i class="fas fa-arrow-down"></i> ${game.discount * 100}%
+            <i class="fas fa-arrow-down"></i> ${item.discount * 100}%
           </span>
           <br />
-          Price: ${game.price - game.price * game.discount}€
+          Price: ${item.price - item.price * item.discount}€
         </p>
-        <button class="discBtn" id="${game.title}">Buy</button>
+        <button class="discBtn" id="${item.title}">Add to Cart</button>
       </div>`
     : `
       <div class="all-games-card">
-        <img src="${game.image}" alt="${game.title}" loading="lazy"/>
-        <h2>${game.title}</h2>
-        <h4>Platforms: ${game.platforms}</h4>
-        <p>Price: ${game.price}€</p>
-        <button class= "buyBtn" style="margin-top: 37px" id="${game.title}">Buy</button>
+        <img src="${item.image}" alt="${item.title}" loading="lazy"/>
+        <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
+        <h4>Platforms: ${item.platforms}</h4>
+        <p>Price: ${item.price}€</p>
+        <button class= "buyBtn" style="margin-top: 37px" id="${item.title}">Add to Cart</button>
       </div>
       `;
 

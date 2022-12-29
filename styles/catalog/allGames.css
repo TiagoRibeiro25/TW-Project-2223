@@ -42,9 +42,17 @@
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 0 0 5px #000;
+  margin-bottom: 15px;
 }
 
-.all-games-card h2 {
+.all-games-card a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.all-games-card a:hover {
   text-decoration: underline;
 }
 
@@ -69,15 +77,13 @@
 }
 
 .all-games-card:hover {
-  background-color: #000;
   box-shadow: 0 0 10px #000;
   scale: 1.05;
   transition: 0.5s;
 }
 
 .all-games-card button:hover {
-  background-color: yellow;
-  color: black;
+  text-decoration: underline;
   text-shadow: none;
   cursor: pointer;
   transition: 0.5s;

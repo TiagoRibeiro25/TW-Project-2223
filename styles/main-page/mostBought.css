@@ -38,9 +38,17 @@
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 0 0 5px #000;
+  margin-bottom: 15px;
 }
 
-.most-bought-card h2 {
+.most-bought-card a {
+  text-decoration: none;
+  color: yellow;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.most-bought-card a:hover {
   text-decoration: underline;
 }
 
@@ -53,8 +61,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  color: yellow;
+  background-color: yellow;
+  color: black;
   text-decoration: none;
   border-radius: 10px;
   margin-top: -5px;
@@ -65,15 +73,13 @@
 }
 
 .most-bought-card:hover {
-  background-color: #000;
   box-shadow: 0 0 10px #000;
   scale: 1.05;
   transition: 0.5s;
 }
 
 .most-bought-card button:hover {
-  background-color: yellow;
-  color: black;
+  text-decoration: underline;
   text-shadow: none;
   cursor: pointer;
   transition: 0.5s;
