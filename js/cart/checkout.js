@@ -75,7 +75,7 @@ document.addEventListener("paste", (e) => {
   const data = e.clipboardData.getData("text");
 
   if (!isConnectedInput(input)) return;
-  if (!data.match(/^[0-9]+$/)) return e.preventDefault();
+  if (!data.match(/^\d+$/)) return e.preventDefault();
 
   e.preventDefault();
   onInputChange(input, data);
