@@ -36,12 +36,7 @@ document.addEventListener("keydown", (e) => {
       }
       break;
     default:
-      if (
-        !e.ctrlKey &&
-        !e.altKey &&
-        e.key.length === 1 &&
-        e.key.match(/^\d$/)
-      ) {
+      if (!e.ctrlKey && !e.altKey && e.key.length === 1 && e.key.match(/^\d$/)) {
         e.preventDefault();
         onInputChange(input, e.key);
       }
@@ -96,9 +91,9 @@ function onInputChange(input, newValue) {
     .querySelector("input").value;
 
   if (firstFour.startsWith("4")) {
-    logo.src = "../../assets/checkout icons/visa.svg";
+    logo.src = "../../assets/checkout-icons/visa.svg";
   } else if (firstFour.startsWith("5")) {
-    logo.src = "../../assets/checkout icons/";
+    logo.src = "../../assets/checkout-icons/";
   }
 }
 
