@@ -1,0 +1,78 @@
+.text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 30px 30px 30px;
+
+  background-color: #333;
+  border: 1px solid yellow;
+  text-align: center;
+}
+
+.error-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: yellow;
+}
+
+.error-subtitle,
+.error-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: yellow;
+}
+
+.error-description {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.error-link {
+  font-size: 1.1rem;
+  color: white;
+  animation: color-change 1.5s infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.error-link:hover {
+  font-size: 1.3rem;
+}
+
+@keyframes color-change {
+  0% {
+    color: white;
+  }
+  50% {
+    color: yellow;
+  }
+  100% {
+    color: white;
+  }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1120px) {
+  .text-center {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .text-center {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .text-center {
+    width: 90%;
+    padding: 0px 10px 25px 10px;
+  }
+}
