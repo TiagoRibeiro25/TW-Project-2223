@@ -29,8 +29,7 @@ function updateTotalPrice() {
     for (const catalogElement of catalogData) {
       if (catalogElement.title === cartElement) {
         totalPrice += catalogElement.onSale
-          ? catalogElement.price -
-            catalogElement.price * catalogElement.discount
+          ? catalogElement.price - catalogElement.price * catalogElement.discount
           : catalogElement.price;
       }
     }
@@ -79,10 +78,10 @@ document.querySelectorAll(".removeBtn").forEach((btn) => {
     removeFromCart(btn.id);
     btn.parentElement.parentElement.remove();
     user = getUserLogged();
-    if (user.cart.length == 0) renderIfEmpty();
+    if (user.cart.length === 0) renderIfEmpty();
     updateCheckoutBtn();
     document.querySelector("#rubberBand").innerText--;
-    updateTotalPrice();
+    if (user.cart.length !== 0) updateTotalPrice();
   });
 });
 

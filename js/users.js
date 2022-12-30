@@ -160,6 +160,11 @@ function updateData(newUser) {
   localStorage[key] = JSON.stringify(users);
 }
 
+/**
+ * It adds an item to the cart of the logged in user.
+ * @param item - The item to be added to the cart.
+ * @returns the user object.
+ */
 export function addToCart(item) {
   const user = getUserLogged();
 
@@ -169,6 +174,10 @@ export function addToCart(item) {
   updateData(user);
 }
 
+/**
+ * It removes an item from the cart of the user logged in.
+ * @param item - the item to be removed from the cart
+ */
 export function removeFromCart(item) {
   const user = getUserLogged();
   for (let i = 0; i < user.cart.length; i++) {
@@ -179,6 +188,9 @@ export function removeFromCart(item) {
   }
 }
 
+/**
+ * It gets the user logged, then it sets the cart to an empty array, and then it updates the data
+ */
 export function removeAll() {
   const user = getUserLogged();
   user.cart = [];

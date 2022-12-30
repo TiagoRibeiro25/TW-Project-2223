@@ -25,7 +25,13 @@ for (const item of mostBought) {
     <div class="most-bought-card">
       <img src="${item.image}" alt="${item.title}" loading="lazy"/>
       <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
-      <h4>Platforms: ${item.platforms}</h4>
+      <h4>${
+        item.platforms.length > 3
+          ? `${item.platforms.at(0)},
+           ${item.platforms.at(1)},
+            ${item.platforms.at(2)}...`
+          : item.platforms.join(", ")
+      }</h4>
       <p>Price: ${item.price}€</p>
       <button id="${item.title}" class= "buyBtn">Add to Cart</button>
     </div>
@@ -39,7 +45,13 @@ onSale.forEach((item) => {
     <div class="on-sale-card">
       <img src="${item.image}" alt="${item.title}" loading="lazy"/>
       <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
-      <h4>Platform: ${item.platforms.at(2)}</h4>
+      <h4>${
+        item.platforms.length > 3
+          ? `${item.platforms.at(0)},
+           ${item.platforms.at(1)},
+            ${item.platforms.at(2)}...`
+          : item.platforms.join(", ")
+      }</h4>
       <p>
         <span class="old-price">${item.price}€</span>
         <span class="discount">

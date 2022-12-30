@@ -7,7 +7,7 @@ function renderCard(item) {
       <div class="all-games-card">
         <img src="${item.image}" alt="${item.title}" loading="lazy"/>
         <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
-        <h4>Platforms: ${item.platforms}</h4>
+        <h4>${item.platforms}</h4>
         <p>
           <span class="old-price">${item.price}€</span>
           <span class="discount">
@@ -22,7 +22,7 @@ function renderCard(item) {
       <div class="all-games-card">
         <img src="${item.image}" alt="${item.title}" loading="lazy"/>
         <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
-        <h4>Platforms: ${item.platforms}</h4>
+        <h4>${item.platforms}</h4>
         <p>Price: ${item.price}€</p>
         <button class= "buyBtn" style="margin-top: 37px" id="${item.title}">Add to Cart</button>
       </div>
