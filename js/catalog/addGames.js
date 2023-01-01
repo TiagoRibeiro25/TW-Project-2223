@@ -38,8 +38,6 @@ function getAllGames() {
   }
 }
 
-getAllGames();
-
 document.querySelector("#AZ").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
   let newCatalogData = [];
@@ -169,9 +167,16 @@ document.querySelector("#myInput").addEventListener("keyup", () => {
   // if there's no results, show custom message
   if (document.querySelector("#all-games-catalog").innerHTML === "") {
     document.querySelector("#all-games-catalog").innerHTML = `
-      <h1 class="title-not-found">
-        No results found
-      </h1>
+    <h1 class="title-not-found">
+    No results found
+    </h1>
     `;
   }
 });
+
+// Filter games if there's a query string (PC)
+const urlParams = new URLSearchParams(window.location.search);
+const filterPlatform = urlParams.get("platform");
+
+if (filterPlatform) document.querySelector(`#${filterPlatform}`).click();
+else getAllGames();
