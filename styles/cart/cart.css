@@ -86,10 +86,10 @@
 }
 
 .checkout-btn:hover {
-  background-color: black;
-  color: yellow;
   text-shadow: none;
+  text-decoration: underline;
   cursor: pointer;
+  transform: scale(1.1);
   transition: 0.5s;
 }
 
