@@ -93,7 +93,7 @@ function onInputChange(input, newValue) {
   if (firstFour.startsWith("4")) {
     logo.src = "../../assets/checkout-icons/visa.svg";
   } else if (firstFour.startsWith("5")) {
-    logo.src = "../../assets/checkout-icons/";
+    logo.src = "../../assets/checkout-icons/mastercard.svg";
   }
 }
 
