@@ -42,10 +42,7 @@ function getAllGames() {
 
 document.querySelector("#AZ").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
-  let newCatalogData = [];
-  for (const game of catalogData) {
-    newCatalogData.push(game);
-  }
+  let newCatalogData = [...catalogData];
   newCatalogData.sort((a, b) => {
     let titleA = a.title;
     let titleB = b.title;
@@ -60,10 +57,7 @@ document.querySelector("#AZ").addEventListener("click", () => {
 
 document.querySelector("#ZA").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
-  let newCatalogData = [];
-  for (const game of catalogData) {
-    newCatalogData.push(game);
-  }
+  let newCatalogData = [...catalogData];
   newCatalogData.sort((a, b) => {
     let titleA = a.title;
     let titleB = b.title;
@@ -78,10 +72,7 @@ document.querySelector("#ZA").addEventListener("click", () => {
 
 document.querySelector("#priceUp").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
-  let newCatalogData = [];
-  for (const game of catalogData) {
-    newCatalogData.push(game);
-  }
+  let newCatalogData = [...catalogData];
   newCatalogData.sort((a, b) => {
     let priceA = a.price - a.price * a.discount;
     let priceB = b.price - b.price * b.discount;
@@ -96,10 +87,7 @@ document.querySelector("#priceUp").addEventListener("click", () => {
 
 document.querySelector("#priceDown").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
-  let newCatalogData = [];
-  for (const game of catalogData) {
-    newCatalogData.push(game);
-  }
+  let newCatalogData = [...catalogData];
   newCatalogData.sort((a, b) => {
     let priceA = a.price - a.price * a.discount;
     let priceB = b.price - b.price * b.discount;
@@ -115,14 +103,15 @@ document.querySelector("#priceDown").addEventListener("click", () => {
 document.querySelector("#sales").addEventListener("click", () => {
   document.querySelector("#all-games-catalog").innerHTML = "";
   const onSale = catalogData.filter((game) => game.onSale);
-  onSale.forEach((game) => {
+
+  for (const game of onSale) {
     renderCard(game);
-  });
+  }
 });
 
 document.querySelector("#reset").addEventListener("click", () => {
-  getAllGames();
   document.querySelector("#myInput").value = "";
+  getAllGames();
 });
 
 // Filter by Platform
@@ -139,9 +128,9 @@ for (const platform of PLATFORMS) {
       return game.platforms.some((platform) => platformType.includes(platform));
     });
 
-    games.forEach((game) => {
+    for (const game of games) {
       renderCard(game);
-    });
+    }
   });
 }
 
@@ -159,9 +148,9 @@ document.querySelector("#myInput").addEventListener("keyup", () => {
   // if there's no results, show custom message
   if (document.querySelector("#all-games-catalog").innerHTML === "") {
     document.querySelector("#all-games-catalog").innerHTML = `
-    <h1 class="title-not-found">
-    No results found
-    </h1>
+      <h1 class="title-not-found">
+        No results found
+      </h1>
     `;
   }
 });
