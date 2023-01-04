@@ -7,7 +7,7 @@ function renderCard(item) {
   document.querySelector("#all-games-catalog").innerHTML += item.onSale
     ? `
       <div class="all-games-card">
-        <img src="${item.image}" alt="${item.title}" loading="lazy"/>
+        <img src="${item.image}" alt="${item.title}" />
         <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
         <h4>${item.platforms}</h4>
         <p>
@@ -22,7 +22,7 @@ function renderCard(item) {
       </div>`
     : `
       <div class="all-games-card">
-        <img src="${item.image}" alt="${item.title}" loading="lazy"/>
+        <img src="${item.image}" alt="${item.title}" />
         <a href="../../../html/item.html?title=${item.title}">${item.title}</a>
         <h4>${item.platforms}</h4>
         <p>Price: ${item.price}€</p>
