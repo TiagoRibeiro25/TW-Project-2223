@@ -1,6 +1,8 @@
 import { catalogData } from "../getData.js";
 import { addEventListenerToBtns } from "./addToCart.js";
 
+const PLATFORMS = ["PC", "PS", "XBOX"];
+
 function renderCard(item) {
   document.querySelector("#all-games-catalog").innerHTML += item.onSale
     ? `
@@ -123,35 +125,25 @@ document.querySelector("#reset").addEventListener("click", () => {
   document.querySelector("#myInput").value = "";
 });
 
-document.querySelector("#PC").addEventListener("click", () => {
-  document.querySelector("#all-games-catalog").innerHTML = "";
-  const platforms = catalogData.filter((game) => game.platforms.includes("PC"));
-  platforms.forEach((game) => {
-    renderCard(game);
-  });
-});
+// Filter by Platform
+for (const platform of PLATFORMS) {
+  document.getElementById(platform).addEventListener("click", () => {
+    document.querySelector("#all-games-catalog").innerHTML = "";
 
-document.querySelector("#PS").addEventListener("click", () => {
-  document.querySelector("#all-games-catalog").innerHTML = "";
-  const platforms = catalogData.filter(
-    (game) =>
-      game.platforms.includes("Playstation 4") ||
-      game.platforms.includes("Playstation 5")
-  );
-  platforms.forEach((game) => {
-    renderCard(game);
-  });
-});
+    let platformType = [];
+    if (platform === "PS") platformType = ["Playstation 4", "Playstation 5"];
+    else if (platform === "XBOX") platformType = ["Xbox One"];
+    else if (platform === "PC") platformType = ["PC"];
 
-document.querySelector("#XBOX").addEventListener("click", () => {
-  document.querySelector("#all-games-catalog").innerHTML = "";
-  const platforms = catalogData.filter((game) =>
-    game.platforms.includes("Xbox One")
-  );
-  platforms.forEach((game) => {
-    renderCard(game);
+    const games = catalogData.filter((game) => {
+      return game.platforms.some((platform) => platformType.includes(platform));
+    });
+
+    games.forEach((game) => {
+      renderCard(game);
+    });
   });
-});
+}
 
 document.querySelector("#myInput").addEventListener("keyup", () => {
   if (document.getElementById("myInput").value.toUpperCase() !== null) {
@@ -178,5 +170,7 @@ document.querySelector("#myInput").addEventListener("keyup", () => {
 const urlParams = new URLSearchParams(window.location.search);
 const filterPlatform = urlParams.get("platform");
 
-if (filterPlatform) document.querySelector(`#${filterPlatform}`).click();
-else getAllGames();
+if (filterPlatform) {
+  if (!PLATFORMS.includes(filterPlatform)) window.location.href = "../../html/404.html";
+  document.querySelector(`#${filterPlatform}`).click();
+} else getAllGames();
