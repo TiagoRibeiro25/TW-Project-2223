@@ -118,3 +118,15 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 500px) {
+  .welcome-info h1 {
+    font-size: 3rem;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .welcome-info h3 {
+    font-size: 1.5rem;
+  }
+}
