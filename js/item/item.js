@@ -16,9 +16,12 @@ document.querySelector("h1").innerHTML = itemData.title
 document.querySelector("img").src = itemData.image
 document.querySelector(".gameDescription").innerHTML = itemData.description
 document.querySelector(".gameDetails").innerHTML += `
-    <p class="gamePrice">${itemData.rating}</p>
-    <p class="gamePrice">${itemData.price - itemData.price * itemData.discount}</p>
-    <p class="gamePrice">${itemData.releaseDate}</p>
+    <p class="gameSpecs">Rating: ${itemData.rating}</p>
+    <br>
+    <p class="gameSpecs">Price: ${itemData.price - itemData.price * itemData.discount}</p>
+    <br>
+    <p class="gameSpecs">Release Date: ${itemData.releaseDate}</p>
+    <br>
     <button id="${itemData.title}" class= "buyBtn">Add to Cart</button>
 `
 
