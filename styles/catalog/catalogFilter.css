@@ -67,14 +67,15 @@
   transition: 0.5s;
   font-size: 1.5rem;
   font-weight: bold;
+  border: none;
+  outline: none;
 }
 .dropbtn p {
   color: yellow;
-  margin-top: -15px;
+  margin-top: -10px;
   transition: 0.5s;
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: "Comic Sans MS";
   width: 150px;
   margin-left: -18px;
 }
@@ -102,7 +103,6 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  font-family: "Comic Sans MS";
 }
 
 #filter-card:hover .dropdown-content {
@@ -139,6 +139,11 @@
 
 .filterBtn h2 {
   margin-top: -2px;
+}
+
+.filterBtn input {
+  border: none;
+  outline: none;
 }
 
 .filterBtn:hover {
@@ -182,7 +187,6 @@
   color: yellow;
   font-size: 2rem;
   font-weight: bold;
-  font-family: "Comic Sans MS";
   margin: 0 auto;
   text-align: center;
   width: 68%;
