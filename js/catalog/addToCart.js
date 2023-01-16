@@ -11,7 +11,7 @@ function addToCardEvent(item) {
 
   console.log(`Adding "${item}" to cart...`);
   addToCart(item);
-
+  
   const popup = document.querySelector("#cart-popup");
   // show the pop up notification that the item was added to the cart
 
