@@ -6,21 +6,23 @@ let user = getUserLogged();
 function renderCard(game) {
   document.querySelector("#userCart").innerHTML += game.onSale
     ? `
-       <tr class="all-cart-content">
-         <td>${game.title}</td>
-         <td>${game.price - game.price * game.discount}€</td>
-         <td><button class= "removeBtn" style="margin-top: 37px" id="${
-           game.title
-         }">Remove</button></td>
-       </tr>
-     `
+      <tr class="all-cart-content">
+        <td><a href="../../html/item.html?title=${game.title}">${
+        game.title
+      }</a></td>
+        <td>${game.price - game.price * game.discount}€</td>
+        <td><button class= "removeBtn" style="margin-top: 37px" id="${
+          game.title
+        }">Remove</button></td>
+      </tr>
+      `
     : `
-       <tr class="all-cart-content">
-         <td>${game.title}</td>
-         <td>${game.price}€</td>
-         <td><button class= "removeBtn" style="margin-top: 37px" id="${game.title}">Remove</button></td>
-       </tr>
-     `;
+      <tr class="all-cart-content">
+        <td><a href="../../html/item.html?title=${game.title}">${game.title}</a></td>
+        <td>${game.price}€</td>
+        <td><button class= "removeBtn" style="margin-top: 37px" id="${game.title}">Remove</button></td>
+      </tr>
+      `;
 }
 
 function updateTotalPrice() {
@@ -29,7 +31,8 @@ function updateTotalPrice() {
     for (const catalogElement of catalogData) {
       if (catalogElement.title === cartElement) {
         totalPrice += catalogElement.onSale
-          ? catalogElement.price - catalogElement.price * catalogElement.discount
+          ? catalogElement.price -
+            catalogElement.price * catalogElement.discount
           : catalogElement.price;
       }
     }

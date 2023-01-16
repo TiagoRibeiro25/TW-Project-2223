@@ -45,6 +45,16 @@
   margin-bottom: 10px;
 }
 
+.all-cart-content td a {
+  color: yellow;
+  text-decoration: none;
+  text-shadow: 0 0 10px #000;
+}
+
+.all-cart-content td a:hover {
+  text-decoration: underline;
+}
+
 .all-cart-content td button {
   width: 80%;
   min-width: 100px;
@@ -56,6 +66,8 @@
   text-decoration: none;
   border-radius: 10px;
   font-size: 1.3rem;
+  border: none;
+  outline: none;
   transition: 0.5s;
 }
 
@@ -82,6 +94,8 @@
   min-width: 120px;
   height: 45px;
   font-size: 1.3rem;
+  border: none;
+  outline: none;
   transition: 0.5s;
 }
 
