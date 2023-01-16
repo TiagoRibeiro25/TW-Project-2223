@@ -2,6 +2,7 @@
 h1 {
   text-align: center;
   margin-top: 2rem;
+  color: yellow;
 }
 
 img {
@@ -23,6 +24,7 @@ img {
 .gameDetails > p {
   text-align: center;
   font-size: 1.2rem;
+  color: yellow;
 }
 
 .gameDescription {
@@ -64,10 +66,13 @@ img {
 
 body {
   background-color: #191919;
-  color: yellow;
   font-family: "Comic Sans MS", cursive, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.added-to-cart-popup > p {
+  color: #191919;
 }
 
 .gameInfo {
