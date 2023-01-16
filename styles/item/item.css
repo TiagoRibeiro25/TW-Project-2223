@@ -1,117 +1,111 @@
 /* Item Page */
 h1 {
-    text-align: center;
-    margin-top: 2rem;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 img {
-    display: block;
-    max-width: 800px; 
-    max-height: 600px; 
-    left: 50px;
-    float: left;
-    margin: 2rem 2rem 2rem 7rem;
+  display: block;
+  max-width: 800px;
+  max-height: 600px;
+  left: 50px;
+  float: left;
+  margin: 2rem 2rem 2rem 7rem;
 }
 
 .gameDetails {
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 2rem;
-    float: right;
-    margin: 2rem 15rem 2rem 2rem;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  float: right;
+  margin: 2rem 15rem 2rem 2rem;
 }
 .gameDetails > p {
-    text-align: center;
-    font-size: 1.2rem; 
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .gameDescription {
-    margin-top: 2rem;
-    font-size: 1.1em;
-    padding: 0.5rem;
-    width: 80%;
-    margin: 0 10%;
+  font-size: 1.1em;
+  padding: 0.5rem;
+  width: 80%;
+  margin: 0 10%;
 }
 
 .gamePlatforms {
-    font-style: italic;
+  font-style: italic;
 }
 
 .gameSpecs {
-    display: block;
-    font-weight: bold;
-    margin-right: 2rem;
-    clear: both;
+  display: block;
+  font-weight: bold;
+  margin-right: 2rem;
+  clear: both;
 }
 
-
 .buyBtn {
-    padding: 0.5rem 1rem;
-    background-color: yellow;
-    color: #242424;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: block;
-    margin: auto;
+  padding: 0.5rem 1rem;
+  background-color: yellow;
+  color: #242424;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  scale: 1;
+  transition: scale 0.2s ease-in-out;
 }
 
 .buyBtn:hover {
-    background-color: #242424;
-    color: yellow;
+  scale: 1.1;
+  text-decoration: underline;
 }
 
 body {
-    background-color: #191919;
-    color: yellow;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-
-.gameInfo {
-    background-color: yellow;
-    color: #191919;
-    padding: 20px;
-    text-align: center;
-    clear: both;
+  background-color: #191919;
+  color: yellow;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+.gameInfo {
+  background-color: yellow;
+  color: #191919;
+  padding: 20px;
+  text-align: center;
+  clear: both;
+}
 
 @media only screen and (max-width: 1530px) {
-    img {
-        float: none; 
-        display: block; 
-        margin: 0 auto; 
-    }
-    .gameDetails {
-        float: none; 
-        clear: both; 
-        margin: 2rem auto; 
-    }
+  img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .gameDetails {
+    float: none;
+    clear: both;
+    margin: 2rem auto;
+  }
 }
 
 @media only screen and (max-width: 754px) {
-    img {
-        float: none; 
-        display: block; 
-        margin: 0 auto; 
-        width: 100%; 
-    }
-    .gameDetails {
-        float: none; 
-        clear: both;
-        margin: 2rem auto; 
-        width: 100%; 
-        text-align: center; 
-    }
-    .gameInfo {
-        width: 100%; 
-    }
+  img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .gameDetails {
+    float: none;
+    clear: both;
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+  }
+  .gameInfo {
+    width: 100%;
+  }
 }
-
-
-
