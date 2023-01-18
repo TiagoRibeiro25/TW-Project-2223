@@ -14,6 +14,7 @@ export function getUsers() {
           name: "John",
           email: "john@email.com",
           password: "123",
+          img: "https://api.dicebear.com/5.x/bottts-neutral/svg?seed=John",
           cart: ["Ghost of Tsushima", "Cyberpunk 2077"],
         },
       ];
@@ -24,7 +25,7 @@ export function getUsers() {
  * @returns The last user's id + 1
  */
 function getNextId() {
-  return getUsers().at(-1).id + 1;
+  return crypto.randomUUID();
 }
 
 /**
@@ -46,6 +47,8 @@ export function createUser(newUser) {
     const users = getUsers();
     newUser.id = getNextId();
     newUser.cart = [];
+    let urlParam = newUser.name.urlParam.replace(/\s+/g, "-").toLowerCase();
+    newUser.img = `https://api.dicebear.com/5.x/bottts-neutral/svg?seed=${urlParam}`;
     users.push(newUser);
 
     const key = PRE_KEY + "users";
