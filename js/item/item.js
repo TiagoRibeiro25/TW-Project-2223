@@ -17,9 +17,9 @@ document.querySelector(".gameDescription").innerHTML = itemData.description;
 document.querySelector(".gameDetails").innerHTML += `
   <p class="gameSpec">Rating: ${itemData.rating}</p>
   <br>
-  <p class="gameSpecs">Price: ${
-    itemData.price - itemData.price * itemData.discount
-  } €</p>
+  <p class="gameSpecs">
+    Price: ${itemData.price - itemData.price * itemData.discount} €
+  </p>
   <br>
   <p class="gameSpecs">Release Date: ${itemData.releaseDate}</p>
   <br>

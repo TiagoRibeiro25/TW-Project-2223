@@ -12,6 +12,10 @@ for (let i = currentYear; i < currentYear + 10; i++) {
   expirationSelect.append(option);
 }
 
+/* Listening for keydown events and then checking if the input is a connected input. If it is, it
+checks if the key is an arrow key, backspace, or a number. If it is an arrow key, it calls the
+handleArrowLeft, handleArrowRight, or handleBackspace function. If it is a number, it calls the
+onInputChange function. */
 document.addEventListener("keydown", (e) => {
   const input = e.target;
   if (!isConnectedInput(input)) return;
@@ -36,13 +40,24 @@ document.addEventListener("keydown", (e) => {
       }
       break;
     default:
-      if (!e.ctrlKey && !e.altKey && e.key.length === 1 && e.key.match(/^\d$/)) {
+      if (
+        !e.ctrlKey &&
+        !e.altKey &&
+        e.key.length === 1 &&
+        e.key.match(/^\d$/)
+      ) {
         e.preventDefault();
         onInputChange(input, e.key);
       }
   }
 });
 
+/**
+ * If the input is the first input, then do nothing. Otherwise, focus on the previous input, and set
+ * the cursor to the end of the input.
+ * @param input - the input element that the user is currently focused on
+ * @param e - The event object
+ */
 function handleArrowLeft(input, e) {
   const prev = input.previousElementSibling;
   prev.focus();
@@ -51,6 +66,12 @@ function handleArrowLeft(input, e) {
   e.preventDefault();
 }
 
+/**
+ * If the user presses the right arrow key, focus on the next input, and set the cursor to the second
+ * character.
+ * @param input - The input element that the user is currently typing in.
+ * @param e - The event object
+ */
 function handleArrowRight(input, e) {
   const next = input.nextElementSibling;
   next.focus();
@@ -59,6 +80,12 @@ function handleArrowRight(input, e) {
   e.preventDefault();
 }
 
+/**
+ * If the user presses backspace, we move the cursor to the previous input, delete the last character,
+ * and move the cursor to the end of the input
+ * @param input - The input element that the user is currently typing in.
+ * @param e - The event object
+ */
 function handleBackspace(input, e) {
   const prev = input.previousElementSibling;
   prev.value = prev.value.substring(0, prev.value.length - 1);
@@ -81,6 +108,12 @@ document.addEventListener("paste", (e) => {
   onInputChange(input, data);
 });
 
+/**
+ * It takes the input, the new value, the start and end of the selection, updates the input value,
+ * focuses the input, and then changes the logo based on the first four numbers of the input.
+ * @param input - The input element that was changed
+ * @param newValue - The new value of the input
+ */
 function onInputChange(input, newValue) {
   const start = input.selectionStart;
   const end = input.selectionEnd;
@@ -110,6 +143,12 @@ function updateInputValue(input, extraValue, start = 0, end = 0) {
   }
 }
 
+/**
+ * It takes the input element and the number of characters to be added to the input element and then it
+ * moves the cursor to the correct position in the input element.
+ * @param input - the input element that was just changed
+ * @param dataLength - The length of the data that was just added to the input.
+ */
 function focusInput(input, dataLength) {
   let addedChars = dataLength;
   let currentInput = input;
@@ -124,6 +163,12 @@ function focusInput(input, dataLength) {
   currentInput.selectionEnd = addedChars;
 }
 
+/**
+ * If the input is an input element and it has a parent with the data-connected-inputs attribute, then
+ * return true.
+ * @param input - The input element that was changed.
+ * @returns a boolean value.
+ */
 function isConnectedInput(input) {
   const parent = input.closest("[data-connected-inputs]");
   return input.matches("input") && parent != null;

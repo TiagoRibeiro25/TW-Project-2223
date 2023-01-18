@@ -28,7 +28,7 @@ for (const item of mostBought) {
       <h4>${
         item.platforms.length > 3
           ? `${item.platforms.at(0)},
-           ${item.platforms.at(1)},
+            ${item.platforms.at(1)},
             ${item.platforms.at(2)}...`
           : item.platforms.join(", ")
       }</h4>
@@ -48,7 +48,7 @@ onSale.forEach((item) => {
       <h4>${
         item.platforms.length > 3
           ? `${item.platforms.at(0)},
-           ${item.platforms.at(1)},
+            ${item.platforms.at(1)},
             ${item.platforms.at(2)}...`
           : item.platforms.join(", ")
       }</h4>

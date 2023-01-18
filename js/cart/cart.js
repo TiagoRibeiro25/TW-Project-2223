@@ -41,6 +41,9 @@ function updateTotalPrice() {
   document.querySelector("#totalPrice").innerText = `${totalPrice}€`;
 }
 
+/**
+ * If the user's cart is empty, hide the checkout button. Otherwise, show the checkout button
+ */
 function updateCheckoutBtn() {
   if (user.cart.length == 0) {
     document.querySelector("#checkout-btn").style.display = "none";
@@ -49,6 +52,10 @@ function updateCheckoutBtn() {
   }
 }
 
+/**
+ * If the userCart div is empty, render a message saying that the user doesn't have any games in their
+ * cart
+ */
 function renderIfEmpty() {
   document.querySelector(".userCart").innerHTML = `
     <h2>You don't have any game in your cart</h2>
