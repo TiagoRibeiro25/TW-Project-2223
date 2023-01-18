@@ -47,7 +47,7 @@ export function createUser(newUser) {
     const users = getUsers();
     newUser.id = getNextId();
     newUser.cart = [];
-    let urlParam = newUser.name.urlParam.replace(/\s+/g, "-").toLowerCase();
+    let urlParam = newUser.name.replace(/\s+/g, "-").toLowerCase();
     newUser.img = `https://api.dicebear.com/5.x/bottts-neutral/svg?seed=${urlParam}`;
     users.push(newUser);
 
